@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "api",
     "model",
+    "corsheaders",
 ]
 
 MIDDLEWARE = [
@@ -51,9 +52,19 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
 ]
 
 ROOT_URLCONF = "modelAPI.urls"
+
+# Allow all domains (for development only)
+CORS_ALLOW_ALL_ORIGINS = True
+
+# Or specify allowed origins (recommended for production)
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",  # Adjust this to your React app's URL
+    "https://ecoradius.vercel.app",
+]
 
 TEMPLATES = [
     {

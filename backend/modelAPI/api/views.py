@@ -5,12 +5,12 @@ from ..model.classifier import Classifier
 
 @api_view(["POST"])
 def classify_input(request):
-    if "file" not in request.FILES:
+    if "image" not in request.data:
         return Response({"error": "No file uploaded"}, status=400)
+    image_data = request.data["image"]
 
     classifier = Classifier()
-    # image_path = "inputs/test3.jpg"
-    prediction = classifier.predict(image_path)
+    prediction = classifier.predict(image_data)
 
     # Send back the prediction
     return Response({"prediction": prediction})

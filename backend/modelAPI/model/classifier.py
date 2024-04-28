@@ -1,10 +1,12 @@
 import torch
 from torchvision import models, transforms
 from PIL import Image
+import base64
+import io
 
 
 class Classifier:
-    weights_path = "weights/trained_model_weights.pth"
+    weights_path = "./weights/trained_model_weights.pth"
 
     def __init__(self, weights_path=weights_path):
 
@@ -41,9 +43,10 @@ class Classifier:
             5: "trash",
         }
 
-    def transform_input(self, image_path):
-        """Transform an input image file path into a tensor suitable for model input."""
-        image = Image.open(image_path)
+    def transform_input(self, image_data):
+        """Transform an input base64 image data into a tensor suitable for model input."""
+        image_bytes = base64.b64decode(image_data)
+        image = Image.open(io.BytesIO(image_bytes)).convert("RGB")
         return self.transform(image).unsqueeze(0)  # Add batch dimension
 
     def classify_input(self, image_tensor):
@@ -55,9 +58,9 @@ class Classifier:
             )  # Get the index of the max log-probability
         return self.class_names[predicted.item()]
 
-    def predict(self, image_path):
+    def predict(self, image_data):
         """Perform the complete prediction process from the image file path."""
-        image_tensor = self.transform_input(image_path)
+        image_tensor = self.transform_input(image_data)
         return self.classify_input(image_tensor)
 
 

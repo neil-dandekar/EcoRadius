@@ -1,11 +1,13 @@
-import Scan from './Scan.tsx'
+import { Analytics } from "@vercel/analytics/react";
+import Scan from "./Scan.tsx";
 
 export const App = () => {
   return (
-  <>
-    <Scan/>
-  </>
-);
+    <>
+      <Scan />
+      <Analytics />
+    </>
+  );
 };
 
 export default App;

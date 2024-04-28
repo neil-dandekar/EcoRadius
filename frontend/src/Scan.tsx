@@ -32,7 +32,7 @@ const Scan = () => {
       .then((data) => {
         console.log("Success:", data);
         setPrediction(data.prediction); // Update the prediction state with the class received from the backend
-        let bin: string = "";
+        let bin: string = "bruh";
         switch (prediction) {
           case "glass":
           case "cardboard":

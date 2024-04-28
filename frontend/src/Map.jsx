@@ -39,6 +39,8 @@ const Map = () => {
         <KmlLayer
           url={'https://ecoradius.vercel.app/trashcan.kml'}
           options={{ preserveViewport: true }}
+          onLoad={() => console.log('KML Layer loaded!')}
+          onError={(error) => console.error('Error loading KML Layer:', error)}
         />
       </GoogleMap>
     </LoadScript>

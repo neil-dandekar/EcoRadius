@@ -47,14 +47,12 @@ const Map = () => {
     const [nearestCoord, setNearestCoord] = useState(null);
 
     const geoLocate = (position) => {
-        console.log(position.coords.latitude, position.coords.longitude)
+       // console.log(position.coords.latitude, position.coords.longitude)
         setCoords({
             lat: position.coords.latitude,
             lng: position.coords.longitude
         });
-        console.log("here")
-        console.log(findNearest(cds, locArr))
-        updateNearest(findNearest(cds, locArr))
+        updateNearest({lat: findNearest(cds, locArr).latitude, lng: findNearest(cds, locArr).longitude })
     };
 
     const updateNearest = (currentCoords) => {

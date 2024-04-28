@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 const Scan = () => {
   const [image, setImage] = useState("");
-  const [prediction, setPrediction] = useState("");
+  const [prediction, setPrediction] = useState("None");
 
   const capture = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files ? event.target.files[0] : null;
@@ -30,9 +30,11 @@ const Scan = () => {
       .then((response) => response.json())
       .then((data) => {
         console.log("Success:", data);
+        setPrediction(data.prediction); // Update the prediction state with the class received from the backend
       })
       .catch((error) => {
         console.error("Error:", error);
+        setPrediction("Error in prediction"); // Handle any errors
       });
   };
 
@@ -53,7 +55,7 @@ const Scan = () => {
             style={{ width: "100%", height: "auto" }}
           />
         )}
-        {prediction}
+        Prediction: {prediction}
       </div>
     </>
   );

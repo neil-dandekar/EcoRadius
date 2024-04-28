@@ -87,7 +87,7 @@ const Map = () => {
         });
       }
       //console.log("your coords: ", cds.lat, cds.lng)
-    }, 2000);
+    }, 500);
     return () => clearInterval(interval);
   }, []);
 

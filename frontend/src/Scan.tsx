@@ -1,5 +1,5 @@
 import "./Scan.css";
-import React, { useState } from "react";
+import { useState } from "react";
 
 const Scan = () => {
   const [image, setImage] = useState("");

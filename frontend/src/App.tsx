@@ -9,13 +9,7 @@ export const App = () => {
     setShowMap(true); // This will be called to show the Map after capture
   };
 
-  //return <>{!showMap ? <Scan onCaptureDone={handleShowMap} /> : <Map />}</>;
-  return(
-    <>
-      <Scan onCaptureDone={handleShowMap}/>
-      <Map />
-    </>
-  );
+  return <>{!showMap ? <Scan onCaptureDone={handleShowMap} /> : <Map />}</>;
 };
 
 export default App;

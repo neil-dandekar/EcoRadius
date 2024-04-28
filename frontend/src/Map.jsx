@@ -52,8 +52,13 @@ const Map = () => {
             lat: position.coords.latitude,
             lng: position.coords.longitude
         });
-        setNearestCoord(findNearest(cds, locArr))
+        console.log(findNearest(cds, locArr))
+        updateNearest(findNearest(cds, locArr))
     };
+
+    const updateNearest = (currentCoords) => {
+      setNearestCoord({lat: currentCoords.lat + 0.01, lng: currentCoords.lng + 0.01});
+    }
 
     const geoLocateErr = (err) => {
         console.log("Error occurred with geolocation measurement!!!: ", err.message);

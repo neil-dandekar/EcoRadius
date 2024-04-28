@@ -63,9 +63,13 @@ const Scan: React.FC<ScanProps> = ({ onCaptureDone }) => {
         let bin: string;
         switch (data.prediction) {
           case "glass":
-          case "plastic":
-          case "metal":
             bin = "recyclable bin.";
+            break;
+          case "plastic":
+            bin = "recyclable bin.";
+            break;
+          case "metal":
+            bin = "recyclable bin. Metal also includes aluminum";
             break;
           case "trash":
             bin = "landfill bin.";

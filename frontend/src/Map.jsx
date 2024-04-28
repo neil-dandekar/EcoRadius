@@ -94,7 +94,7 @@ const Map = () => {
   return (
     <LoadScript googleMapsApiKey={"AIzaSyBIXoPr9hxhk7hs5PRlP9imymTuPC0TPzI"}>
       <GoogleMap
-        mapContainerStyle={{ width: "400px", height: "400px" }}
+        mapContainerStyle={{ width: "400px", height: "700px" }}
         center={cds}
         zoom={10}
       >

@@ -61,23 +61,6 @@ const Map = () => {
     const geoLocateErr = (err) => {
         console.log("Error occurred with geolocation measurement!!!: ", err.message);
     }
-
-    const highlightNearest = () => {
-        let nearest = findNearest(cds, locArr)
-        let mapMarkers = locArr.map(place => {
-            return new google.maps.Marker({
-                position: {lat: place.latitude, lng: place.longitude},
-                //map: map,
-                title: place.description
-            });
-        });
-
-        mapMarkers.forEach(marker => {
-            if(marker.getPosition().lat() === nearest.latitude && marker.getPosition().lng() === nearest.longitude){
-                marker.setIcon('http://maps.google.com/mapfiles/ms/icons/red-dot.png');
-            }
-        });
-    }
     
     // get position
     useEffect(() => {
@@ -88,7 +71,6 @@ const Map = () => {
                  );
             }
             console.log("your coords: ", cds.lat, cds.lng)
-            highlightNearest();
         }, 10000);
         return () => clearInterval(interval)
     }, []);

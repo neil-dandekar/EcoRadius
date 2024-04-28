@@ -23,7 +23,7 @@ const Map = () => {
         }
     }, []);
 
-    const startTrackingLocation = () => {
+    /* const startTrackingLocation = () => {
         if("geolocation" in navigator){
             navigator.geolocation.watchPosition(geoLocate, geoLocateErr, 
                 {enableHighAccuracy: true, timeout: 10000, maximumAge: 0}
@@ -35,7 +35,7 @@ const Map = () => {
     }
 
     startTrackingLocation();
-
+ */
 
     // <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIXoPr9hxhk7hs5PRlP9imymTuPC0TPzI&callback=initMap" async defer></script>
     // <div id="map"></div>
@@ -47,7 +47,7 @@ const Map = () => {
                 zoom = {8}
             >
                 <KmlLayer 
-                    url = {'./assets/trashcan.kml'}
+                    url = {'../assets/trashcan.kml'}
                     options={{ preserveViewport: true }}
                 />
             </GoogleMap>

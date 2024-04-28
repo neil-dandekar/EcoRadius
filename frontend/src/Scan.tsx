@@ -32,20 +32,22 @@ const Scan = () => {
       .then((data) => {
         console.log("Success:", data);
         setPrediction(data.prediction); // Update the prediction state with the class received from the backend
+        let bin: string = "";
         switch (prediction) {
           case "glass":
           case "cardboard":
           case "plastic":
           case "metal":
-            setBintype("recyclable");
+            bin = "recyclable";
             break;
           case "trash":
-            setBintype("landfill");
+            bin = "landfill";
             break;
           case "paper":
-            setBintype("compostable");
+            bin = "compostable";
             break;
         }
+        setBintype(bin);
       })
       .catch((error) => {
         console.error("Error:", error);

@@ -1,40 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { LoadScript, GoogleMap, KmlLayer } from "@react-google-maps/api";
+import {getDistance, findNearest} from 'geolib';
+
+
 
 const google = window.google;
 
-// returns marker with minimum distance
-/* async function closestTrashCan(currentPos,url){
-    try{
-        const res = await fetch(url)
-        const kml = await res.text()
-        const parser = new DOMParser()
-        const xml = parser.parseFromString(kml, "application/xml")
-        const placemarks = xml.getElementsByTagName("Placemark")
-        
-        var coordsText, coords, dist, singCoord
-        let minMarkerDist = Infinity
-        let minMarker = null
-        for(let i = 0; i < placemarks.length; i++){
-            coordsText = placemarks[i].getElementsByTagName("coordinates")
-            coords = coordsText.split(',').map(Number)
-            singCoord = new google.maps.LatLng(coords[1],coords[0])
-            dist = google.maps.geometry.spherical.computeDistanceBetween(currentPos, singCoord )
-            if(minMarkerDist > dist){
-                minMarkerDist = dist
-                minMarker = placemarks[i]
-            }
-        }
-        return [minMarkerDist, minMarker]
-    } catch (err) {
-        console.error("Failed parse! With error ", err)
-        return []
-    }
-} */
-
-
 const Map = () => {
   const [cds, setCoords] = useState({ lat: 0, lng: 0 });
+  const minDist = async () => {
+
+  };
   const minDist = async () => {
     try{
         const res = await fetch('https://ecoradius.vercel.app/trashcan.kml')
@@ -47,7 +23,8 @@ const Map = () => {
         let minMarkerDist = Infinity
         let minMarker = null
         for(let i = 0; i < placemarks.length; i++){
-            coordsText = placemarks[i].getElementsByTagName("coordinates")[0].textContent;
+            coordsText = placemarks[i].getElementsByTagName("coordinates");
+            console.log(coordsText)
             coords = coordsText.trim().split(',').map(Number)
             singCoord = new google.maps.LatLng(coords[1],coords[0])
             dist = google.maps.geometry.spherical.computeDistanceBetween(cds, singCoord)
@@ -62,7 +39,7 @@ const Map = () => {
         console.error("Failed parse! With error ", err)
         return []
     }
-  };
+  }; 
 
   const geoLocate = (position) => {
       console.log(position.coords.latitude, position.coords.longitude)

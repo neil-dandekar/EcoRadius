@@ -82,7 +82,7 @@ const Map = () => {
       if ("geolocation" in navigator) {
         navigator.geolocation.watchPosition(geoLocate, geoLocateErr, {
           enableHighAccuracy: true,
-          timeout: 10000,
+          timeout: 3500,
           maximumAge: 0,
         });
       }

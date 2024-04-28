@@ -10,12 +10,6 @@ const Map = () => {
         lat: position.coords.latitude,
         lng: position.coords.longitude
       });
-    /* navigator.geolocation.getCurrentPosition((position) => {
-      setCoords({
-        lat: position.coords.latitude,
-        lng: position.coords.longitude,
-      });
-    }); */
   };
 
     const geoLocateErr = (err) => {
@@ -35,31 +29,15 @@ const Map = () => {
         return () => clearInterval(interval)
     }, []);
 
-  /* const startTrackingLocation = () => {
-        if("geolocation" in navigator){
-            navigator.geolocation.watchPosition(geoLocate, geoLocateErr, 
-                {enableHighAccuracy: true, timeout: 10000, maximumAge: 0}
-             );
-        } else {
-            console.log("ERROR! Start tracking location failed!!!!")
-        }
-
-    }
-
-    startTrackingLocation();
- */
-
-  // <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIXoPr9hxhk7hs5PRlP9imymTuPC0TPzI&callback=initMap" async defer></script>
-  // <div id="map"></div>
   return (
     <LoadScript googleMapsApiKey={"AIzaSyBIXoPr9hxhk7hs5PRlP9imymTuPC0TPzI"}>
       <GoogleMap
         mapContainerStyle={{ width: "400px", height: "400px" }}
         center={cds}
-        zoom={8}
+        zoom={10}
       >
         <KmlLayer
-          url={"../assets/trashcan.kml"}
+          url={"https://ecoradius.vercel.app/frontend/assets/trashcan.kml"}
           options={{ preserveViewport: true }}
         />
       </GoogleMap>

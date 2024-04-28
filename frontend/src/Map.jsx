@@ -87,13 +87,17 @@ const Map = () => {
         });
       }
       //console.log("your coords: ", cds.lat, cds.lng)
-    }, 500);
+    }, 2000);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <LoadScript googleMapsApiKey={"AIzaSyBIXoPr9hxhk7hs5PRlP9imymTuPC0TPzI"}>
-      <GoogleMap className="map" center={cds} zoom={10}>
+      <GoogleMap
+        mapContainerStyle={{ width: "400px", height: "400px" }}
+        center={cds}
+        zoom={10}
+      >
         <KmlLayer
           url="https://ecoradius.vercel.app/trashcan.kml"
           options={{ preserveViewport: true }}

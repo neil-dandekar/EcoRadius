@@ -107,10 +107,6 @@ const Map = () => {
         {nearestCoord && (
           <>
             <Marker
-              position={nearestCoord}
-              icon={"http://maps.google.com/mapfiles/ms/icons/blue-dot.png"}
-            />
-            <Marker
               position={cds}
               icon={"http://maps.google.com/mapfiles/ms/icons/red-dot.png"}
             />

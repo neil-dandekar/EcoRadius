@@ -9,9 +9,6 @@ const google = window.google;
 const Map = () => {
   const [cds, setCoords] = useState({ lat: 0, lng: 0 });
   const minDist = async () => {
-
-  };
-  const minDist = async () => {
     try{
         const res = await fetch('https://ecoradius.vercel.app/trashcan.kml')
         const kml = await res.text()

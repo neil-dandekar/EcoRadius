@@ -96,7 +96,7 @@ const Map = () => {
       <GoogleMap
         mapContainerStyle={{ width: "400px", height: "700px" }}
         center={cds}
-        zoom={50}
+        zoom={30}
       >
         <KmlLayer
           url="https://ecoradius.vercel.app/trashcan.kml"

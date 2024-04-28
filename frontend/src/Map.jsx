@@ -44,7 +44,7 @@ const locArr = [
 
 const Map = () => {
     const [cds, setCoords] = useState({ lat: 0, lng: 0 });
-    const [nearestCoord, setNearestCoord] = useState(null);
+    const [nearestCoord, setNearestCoord] = useState({lat: 0, lng: 0});
 
     const geoLocate = (position) => {
        // console.log(position.coords.latitude, position.coords.longitude)
@@ -53,6 +53,7 @@ const Map = () => {
             lng: position.coords.longitude
         });
         updateNearest({lat: findNearest(cds, locArr).latitude, lng: findNearest(cds, locArr).longitude })
+        console.log(nearestCoord)
     };
 
     const updateNearest = (currentCoords) => {
@@ -71,7 +72,7 @@ const Map = () => {
                     {enableHighAccuracy: true, timeout: 10000, maximumAge: 0}
                  );
             }
-            console.log("your coords: ", cds.lat, cds.lng)
+            //console.log("your coords: ", cds.lat, cds.lng)
         }, 10000);
         return () => clearInterval(interval)
     }, []);

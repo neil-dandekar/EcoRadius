@@ -91,10 +91,16 @@ const Map = () => {
           onError={(error) => console.error('Error loading KML Layer:', error)}
         />
         {nearestCoord && (
+          <>
             <Marker
                 position = {nearestCoord}
                 icon = {"http://maps.google.com/mapfiles/ms/icons/blue-dot.png"}
             />
+            <Marker
+                position={cds}
+                icon = {"http://maps.google.com/mapfiles/ms/icons/red-dot.png"}
+            />
+          </>
         )}
       </GoogleMap>
     </LoadScript>

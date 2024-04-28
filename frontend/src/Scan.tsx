@@ -3,15 +3,14 @@ import React, { useState } from "react";
 
 const Scan = () => {
   const [image, setImage] = useState("");
-
-  const getPrediction = ()
+  const [prediction, setPrediction] = useState("");
 
   const capture = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files ? event.target.files[0] : null;
     if (file) {
       const reader = new FileReader();
       reader.onload = function (evt: ProgressEvent<FileReader>) {
-        const base64image = evt.target!.result as string
+        const base64image = evt.target!.result as string;
         setImage(base64image);
         sendToBackend(base64image);
       };
@@ -20,20 +19,22 @@ const Scan = () => {
   };
 
   const sendToBackend = (base64image: string) => {
-    fetch('http://127.0.0.1:8000/api/classify/', {  // Ensure this URL is correct and points to your Django server
-      method: 'POST',
+    fetch("http://127.0.0.1:8000/api/classify/", {
+      // Ensure this URL is correct and points to your Django server
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify({ image: base64image })
+      body: JSON.stringify({ image: base64image }),
     })
-    .then(response => response.json())
-    .then(data => {
-      console.log('Success:', data);
-    })
-    .catch((error) => {
-      console.error('Error:', error);
-    });
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
+        setPrediction(data);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
   };
 
   return (
@@ -54,6 +55,7 @@ const Scan = () => {
           />
         )}
         {image}
+        {prediction}
       </div>
     </>
   );

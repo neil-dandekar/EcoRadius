@@ -1,7 +1,10 @@
 import "./Scan.css";
 import { useState, useRef, useEffect } from "react";
 
-const Scan = ({ onCaptureDone }) => {
+interface ScanProps {
+  onCaptureDone: () => void; // Define the type for the onCaptureDone function
+}
+const Scan: React.FC<ScanProps> = ({ onCaptureDone }) => {
   const [image, setImage] = useState<string>("");
   const [prediction, setPrediction] = useState<string>("None");
   const [bintype, setBintype] = useState<string>("None");

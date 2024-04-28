@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Scan from "./Scan";
 import Map from "./Map";
 

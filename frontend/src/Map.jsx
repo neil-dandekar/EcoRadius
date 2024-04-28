@@ -52,8 +52,9 @@ const Map = () => {
             lat: position.coords.latitude,
             lng: position.coords.longitude
         });
-        updateNearest({lat: findNearest(cds, locArr).latitude, lng: findNearest(cds, locArr).longitude })
-        console.log(nearestCoord)
+        let tempCoord = findNearest(cds, locArr)
+        updateNearest({lat: tempCoord.latitude, lng: tempCoord.longitude })
+        console.log(nearestCoord, tempCoord)
     };
 
     const updateNearest = (currentCoords) => {
@@ -73,7 +74,7 @@ const Map = () => {
                  );
             }
             //console.log("your coords: ", cds.lat, cds.lng)
-        }, 10000);
+        }, 2000);
         return () => clearInterval(interval)
     }, []);
 

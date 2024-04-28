@@ -37,7 +37,7 @@ const Map = () => {
         zoom={10}
       >
         <KmlLayer
-          url={"https://ecoradius.vercel.app/trashcan.kml"}
+          url={'${process.env.PUBLIC_URL}/trashcan.kml'}
           options={{ preserveViewport: true }}
         />
       </GoogleMap>

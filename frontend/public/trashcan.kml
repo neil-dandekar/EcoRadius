@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>UC Davis Trash Cans</name>
+    <description/>
+    <Style id="icon-1899-0288D1-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-0288D1-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-0288D1">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0288D1-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0288D1-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Trash cans</name>
+      <Placemark>
+        <name>Trashcan #1</name>
+        <description><![CDATA[<img src="https://doc-04-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/om7i5qu9s43rnhr799v4tbn7os/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgqXhbGaW6v7jGF_f7Zy7p06zc6gPGZroDwRq8OhOM2oukkCRB2wCV3IlPrnMIC4724ySu2YfmRZ33attzCGKhqnBaa7RggbymcCBsJRPmyKw1NAVJ6DSq-ocUvSgfWg2TY5BDrmk_lUhjUmckKFH_YAW-lD019suwW2escjkWtDWcMs0R_6Lq-oOb47BUyDJpCuMdG_ZUbsqXICFA34QDcC_mdXJ84pibHzRlq_zvsJfFA?session=0&fife" height="200" width="auto" /><br><br>South of the International Center, facing California Ave]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://doc-04-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/om7i5qu9s43rnhr799v4tbn7os/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgqXhbGaW6v7jGF_f7Zy7p06zc6gPGZroDwRq8OhOM2oukkCRB2wCV3IlPrnMIC4724ySu2YfmRZ33attzCGKhqnBaa7RggbymcCBsJRPmyKw1NAVJ6DSq-ocUvSgfWg2TY5BDrmk_lUhjUmckKFH_YAW-lD019suwW2escjkWtDWcMs0R_6Lq-oOb47BUyDJpCuMdG_ZUbsqXICFA34QDcC_mdXJ84pibHzRlq_zvsJfFA?session=0&fife]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -121.754064,38.5454983,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trashcan #2</name>
+        <description><![CDATA[<img src="https://doc-0s-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/543qufn3uo1as41piicq087jp8/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgrk46QYJLqQmUyigYZnjMHZAwfr8yX5QM5_y4w2oqk0b_Pj9uLXnEknPhYl-Yc5fONgdV7cWoQw5E6bJ_wEUGY5ZrhdDladpimvGPaYa3GKdmBeIrWQ5afyIXWbGXKHH-mmaQo5dnS_QwRMuXgvlIOYJLntU4Q0TlSnaWYcz3QMC51pOoIPW6pvfwKnNeU-upnRTaVAERR7hBjMtcFa1JfkG06ZZEySInBQkZpi5ioo_2A?session=0&fife" height="200" width="auto" /><br><br>By the stairs, accepts cardboard only]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://doc-0s-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/543qufn3uo1as41piicq087jp8/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgrk46QYJLqQmUyigYZnjMHZAwfr8yX5QM5_y4w2oqk0b_Pj9uLXnEknPhYl-Yc5fONgdV7cWoQw5E6bJ_wEUGY5ZrhdDladpimvGPaYa3GKdmBeIrWQ5afyIXWbGXKHH-mmaQo5dnS_QwRMuXgvlIOYJLntU4Q0TlSnaWYcz3QMC51pOoIPW6pvfwKnNeU-upnRTaVAERR7hBjMtcFa1JfkG06ZZEySInBQkZpi5ioo_2A?session=0&fife]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -121.7548268,38.5451431,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trashcan #3</name>
+        <description><![CDATA[<img src="https://doc-0c-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/d4h0tgu7df2r26f1qe0ahhum5o/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgrI4OvJWAfTXPXhm8yFDXpNfJ1jtnGx6WYZ94eWCeGzKOkKgQdI8L9ojVAEUIpSh01gU03YfUL39__AI01oqaw-XHE1aG_q_PI8gA4unFmwr5g8Pz544CLFiDaeYWK0Rxb4WhpBs_cdqiHqZMTqciirvQyGDV1XLProQC3SdBd5gMXl5Z8xyZcAKRMne89Bbi22ksB0o6lWPJ-Nyg7InHhf7GFOOl6-LvsjdJhWD6TPbdE?session=0&fife" height="200" width="auto" /><br><br>Near the disabled parking, takes mixed recyclables]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://doc-0c-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/d4h0tgu7df2r26f1qe0ahhum5o/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgrI4OvJWAfTXPXhm8yFDXpNfJ1jtnGx6WYZ94eWCeGzKOkKgQdI8L9ojVAEUIpSh01gU03YfUL39__AI01oqaw-XHE1aG_q_PI8gA4unFmwr5g8Pz544CLFiDaeYWK0Rxb4WhpBs_cdqiHqZMTqciirvQyGDV1XLProQC3SdBd5gMXl5Z8xyZcAKRMne89Bbi22ksB0o6lWPJ-Nyg7InHhf7GFOOl6-LvsjdJhWD6TPbdE?session=0&fife]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -121.7566535,38.54469,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trashcan #4</name>
+        <description><![CDATA[<img src="https://doc-14-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/486ipj7m5keb9fb5kfhjlker2o/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgr-xAPclTTwIflhvcf_ulCfJM02LKRtQpMY4WV00dL6l6_wEXgRyBbf1xozlKjw61NFRcNKYQPdbdkvwfTfJ3CKi98-KFoiRRLnymUFBYzp73UxCfhvvvlj_Fpvx1Dcuu10-5_xS3sNgK6rl5bYiObychMhzujn6A5mIDH0pzPFjFq5dGtBPvieFrPfS7PGOccMF2yVbJS2ORMJoq8glzQ9AKplGXeu53ahxsqfqtDDWNs?session=0&fife" height="200" width="auto" /><br><br>Mixed Recyclables]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://doc-14-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/486ipj7m5keb9fb5kfhjlker2o/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgr-xAPclTTwIflhvcf_ulCfJM02LKRtQpMY4WV00dL6l6_wEXgRyBbf1xozlKjw61NFRcNKYQPdbdkvwfTfJ3CKi98-KFoiRRLnymUFBYzp73UxCfhvvvlj_Fpvx1Dcuu10-5_xS3sNgK6rl5bYiObychMhzujn6A5mIDH0pzPFjFq5dGtBPvieFrPfS7PGOccMF2yVbJS2ORMJoq8glzQ9AKplGXeu53ahxsqfqtDDWNs?session=0&fife]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -121.7556015,38.5446842,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trashcan #5</name>
+        <description><![CDATA[<img src="https://doc-0s-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/6hu0rtdqpn0fkhfe39f4qk7oec/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgryw_rfOVMmZLu7gf3gs42TY5_8ttCeFWzMzX2NHv6dpfAvHt0uNUjjkwkpbw28_C1hbhu2hoqeKerJunaxzNJ-f8gBRBjHglsjFbGCOVu2CIWugHuw4MBd_oaUBaPpTBVHzB3qLexn62lVnb8TxaxmkTA-JdZ4ail053kt1sHzGpMVtqC1rLiLOogvss2HlvH46fIU_7Y5NL7UpLeOL96LBwuVBIp6mriaf1MAQEqwIqg?session=0&fife" height="200" width="auto" /><br><br>Mixed Recycling & Cardboard]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://doc-0s-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/6hu0rtdqpn0fkhfe39f4qk7oec/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgryw_rfOVMmZLu7gf3gs42TY5_8ttCeFWzMzX2NHv6dpfAvHt0uNUjjkwkpbw28_C1hbhu2hoqeKerJunaxzNJ-f8gBRBjHglsjFbGCOVu2CIWugHuw4MBd_oaUBaPpTBVHzB3qLexn62lVnb8TxaxmkTA-JdZ4ail053kt1sHzGpMVtqC1rLiLOogvss2HlvH46fIU_7Y5NL7UpLeOL96LBwuVBIp6mriaf1MAQEqwIqg?session=0&fife]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -121.7512634,38.5434808,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trashcan #6</name>
+        <description><![CDATA[<img src="https://doc-14-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/3iupanf3iftgd2nn4v6v99shi0/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgoKBibqFj802KlF2IFongDCg8foWaSFsoprT6iMhtxpaHpD7KZmNGGUDfd4VkRHop68HmgJIUT646Lf-xYsDCx3bda6gUKxUiSp4_1Ozry_mFFHrYAR1H4VhV5TUmDyneklH6Jg3jox19qPwrfcKL7So4LTVs1M-iqRxaFCA9YoA_lsBf1g1LgtXvoY9Fa_qRfrrEKHgkc9qKxAhpVyoOQcNVIQkDeblqNMYlMOqUNCNBo?session=0&fife" height="200" width="auto" /><br><br>Unsorted/regular trash]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://doc-14-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/3iupanf3iftgd2nn4v6v99shi0/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgoKBibqFj802KlF2IFongDCg8foWaSFsoprT6iMhtxpaHpD7KZmNGGUDfd4VkRHop68HmgJIUT646Lf-xYsDCx3bda6gUKxUiSp4_1Ozry_mFFHrYAR1H4VhV5TUmDyneklH6Jg3jox19qPwrfcKL7So4LTVs1M-iqRxaFCA9YoA_lsBf1g1LgtXvoY9Fa_qRfrrEKHgkc9qKxAhpVyoOQcNVIQkDeblqNMYlMOqUNCNBo?session=0&fife]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -121.7510025,38.5433662,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trashcan #7</name>
+        <description><![CDATA[<img src="https://doc-0c-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/98igd0colt04cuc141mvnrrhjc/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgrNzkDMH5-a2Baec6V1hztUgXlpFtTZ1YMzDB1_vnX0CM3taj49Zs0NE_71LwlkqGgUx6decWoJw9smLFhXg-IdePlbGUeoxogT9_ZS70PPEmrf6TV1qXz66lt4kPgSRiK3OKHRo7PvSB4xCAgT_E-1FI0aoCEoQIpJ7BfJ9kfjc76QYYbAKanE331eGTzGdFpj2C8WSsPIp00vs1oPtnXAi73pamLaGhV5uSrcuzIpr9o?session=0&fife" height="200" width="auto" /><br><br>By the entrance of the Department of Land and water resources]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://doc-0c-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/98igd0colt04cuc141mvnrrhjc/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgrNzkDMH5-a2Baec6V1hztUgXlpFtTZ1YMzDB1_vnX0CM3taj49Zs0NE_71LwlkqGgUx6decWoJw9smLFhXg-IdePlbGUeoxogT9_ZS70PPEmrf6TV1qXz66lt4kPgSRiK3OKHRo7PvSB4xCAgT_E-1FI0aoCEoQIpJ7BfJ9kfjc76QYYbAKanE331eGTzGdFpj2C8WSsPIp00vs1oPtnXAi73pamLaGhV5uSrcuzIpr9o?session=0&fife]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -121.7527257,38.5430493,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trashcan #8</name>
+        <description><![CDATA[<img src="https://doc-0c-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/cf7j2gfnf0u2ej3lmekcm0b3v0/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgq2MyllHbG599VMLClmLziAsksoPNEGaZPCUS9sguwQZPEr8CLqWXEegcrnjD-YV8_G6AkdQGxMybQIhaVyADu5qqlxlswaQ7ZjlEja8aU5GGV34q40hgqadcYNhOz9N7m9sl4frpyzVqVNlB74bNT_0zR3IGUei10KTDc6QI6_idhQZvjkAvKYcG-zBE3h_8r1LJsWYKYeqCNCnpTlWPuznkC_bKjOKGP1PirwwP4l0XA?session=0&fife" height="200" width="auto" /><br><br>By the entrance to Veihmeyer Hall]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://doc-0c-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/cf7j2gfnf0u2ej3lmekcm0b3v0/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgq2MyllHbG599VMLClmLziAsksoPNEGaZPCUS9sguwQZPEr8CLqWXEegcrnjD-YV8_G6AkdQGxMybQIhaVyADu5qqlxlswaQ7ZjlEja8aU5GGV34q40hgqadcYNhOz9N7m9sl4frpyzVqVNlB74bNT_0zR3IGUei10KTDc6QI6_idhQZvjkAvKYcG-zBE3h_8r1LJsWYKYeqCNCnpTlWPuznkC_bKjOKGP1PirwwP4l0XA?session=0&fife]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -121.7527173,38.5428717,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trashcan #9</name>
+        <description><![CDATA[<img src="https://doc-0k-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/dd1ijg9or1b5c20n4rt29i9so8/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgoKehC835ieE-GYuRMSuYlzdmDPVi3JRGjOGXjuFhfJRyK0PZZN6WCOAjvkUi53Z--K71NHAaCdwb_ew62tFNGNyR5HrE1eKT6nmlc3Euq330db_WCSwae8pyjuaz0Sd30GcjrykgPXStq6sIkQmSeRMo2N4FRFm7_mFM5znACh-S1YmP4tr4bItSgE9AogAXxw7IWgJLilp7JK5znfUwzxKC71Y_O1zmNU0AzwNKffHMs?session=0&fife" height="200" width="auto" /><br><br>Recycling & Regular Garbage]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://doc-0k-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/dd1ijg9or1b5c20n4rt29i9so8/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgoKehC835ieE-GYuRMSuYlzdmDPVi3JRGjOGXjuFhfJRyK0PZZN6WCOAjvkUi53Z--K71NHAaCdwb_ew62tFNGNyR5HrE1eKT6nmlc3Euq330db_WCSwae8pyjuaz0Sd30GcjrykgPXStq6sIkQmSeRMo2N4FRFm7_mFM5znACh-S1YmP4tr4bItSgE9AogAXxw7IWgJLilp7JK5znfUwzxKC71Y_O1zmNU0AzwNKffHMs?session=0&fife]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -121.7546399,38.5428942,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trashcan #10</name>
+        <description><![CDATA[<img src="https://doc-0c-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/43mf4cjvg97md08h9ukcfqc6ug/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgqvRJ7vVuU_kZF98IZLwaobtjxv8pxWSFr9b0zjd9ldrzow7shtG-muYlx8iIiCnGXpUEajL1j0f8pkQFs46HKK9jz6NQoXXRhYwRb8gspg77ZHWH_r_rwGQgIoYXL-e5VqPiflX7jVW9FZXtxMc64Eg-CQhXh2dS57LhMrd8EFAby5WHvAI6WDxg4xAusyEtUNJN03Xnn7K5igXVQOYOPmIBcwCjOnMSV6Pcj6F6XEURg?session=0&fife" height="200" width="auto" /><br><br>Mixed Recyclable & Regular Garbage]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://doc-0c-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/43mf4cjvg97md08h9ukcfqc6ug/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgqvRJ7vVuU_kZF98IZLwaobtjxv8pxWSFr9b0zjd9ldrzow7shtG-muYlx8iIiCnGXpUEajL1j0f8pkQFs46HKK9jz6NQoXXRhYwRb8gspg77ZHWH_r_rwGQgIoYXL-e5VqPiflX7jVW9FZXtxMc64Eg-CQhXh2dS57LhMrd8EFAby5WHvAI6WDxg4xAusyEtUNJN03Xnn7K5igXVQOYOPmIBcwCjOnMSV6Pcj6F6XEURg?session=0&fife]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -121.7549456,38.5433963,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trashcan #11</name>
+        <description><![CDATA[<img src="https://doc-0g-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/7usmn9fo09pv70k575u2jocc6k/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgpPueQHVUUHerMbtk46fWyzCyGcVq6oYLJhML67tYZR47SFNBGvgO9p7BLK1lb1r_tly265GZA49ZCJwf8ooXZwdAXdnaGzE9tcTbHBC2tgGdgW5I9tSWPqewTHGEfsF8NLKrT4cVHTnbDIaHz9WoJ1Z5u8oz90yHLSil-KEhsITcz8juVil4fohFjDrzHoWH_F5TqflxMN8G5VVo7TAVE4hqIet0pLPmi4Ox7GXTTxFsE?session=0&fife" height="200" width="auto" /><br><br>Located by East Entrance of Cowell Bldg:<br><br>Recycling & Regular Garbage]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://doc-0g-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/7usmn9fo09pv70k575u2jocc6k/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgpPueQHVUUHerMbtk46fWyzCyGcVq6oYLJhML67tYZR47SFNBGvgO9p7BLK1lb1r_tly265GZA49ZCJwf8ooXZwdAXdnaGzE9tcTbHBC2tgGdgW5I9tSWPqewTHGEfsF8NLKrT4cVHTnbDIaHz9WoJ1Z5u8oz90yHLSil-KEhsITcz8juVil4fohFjDrzHoWH_F5TqflxMN8G5VVo7TAVE4hqIet0pLPmi4Ox7GXTTxFsE?session=0&fife]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -121.7539907,38.5443974,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trashcan #12</name>
+        <description><![CDATA[<img src="https://doc-0s-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/l44ef42u3t4u1u519mcp8rr1ss/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgqDv4iXD7LcPy17UflQj7PkLtitG_oal9CvTXdVPaCGMXb_FnwrWyW0LJTiQILWzAOCbFTtP_wg2aZGgIKqUrFazcYXAKK_KalPQd5jaogNgNRvvvLxRaMgz3O3ghvNHDEkm5eichBtOyrRp2x1Ic1TlJQUPR_Y7Krxok3W8um1uB9bw_oyC8APX0JJTz9CkEspaeT1cWhhETgrRfBwudEDaIEiovfuIas4FHq4_KZ9w-Y?session=0&fife" height="200" width="auto" /><br><br>By LaRue Rd<br><br>Multiple types of trash]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://doc-0s-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/l44ef42u3t4u1u519mcp8rr1ss/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgqDv4iXD7LcPy17UflQj7PkLtitG_oal9CvTXdVPaCGMXb_FnwrWyW0LJTiQILWzAOCbFTtP_wg2aZGgIKqUrFazcYXAKK_KalPQd5jaogNgNRvvvLxRaMgz3O3ghvNHDEkm5eichBtOyrRp2x1Ic1TlJQUPR_Y7Krxok3W8um1uB9bw_oyC8APX0JJTz9CkEspaeT1cWhhETgrRfBwudEDaIEiovfuIas4FHq4_KZ9w-Y?session=0&fife]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -121.7590169,38.5448665,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trashcan #13</name>
+        <description><![CDATA[<img src="https://doc-0s-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/b2tds8t2f2946ioqh303snucls/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgoVb5IPqyp8FjOkR8o3um3O1f-jcSH6IAAHzxMXIDeyVhmdn3ner7LcuDZReZ3TG4uYmiWfXP_rBbEHcEgvL_E3gjPm4zBbSrs6i-q7xoyI5cRsMTrG0BS1cirtaCPgWHRi3yRMvH9PjZSYlF_YT44HIThAzCVyIxa5o20hC1S2MM7pMtPrsWb4ynR1mXNp_8DE9N7GaUyP5ldUep7TmNbqQ-1qvHCiAdv996L1Jjnw7Xc?session=0&fife" height="200" width="auto" /><br><br>Recycling & Garbage, close to the ARC entrance]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://doc-0s-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/b2tds8t2f2946ioqh303snucls/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgoVb5IPqyp8FjOkR8o3um3O1f-jcSH6IAAHzxMXIDeyVhmdn3ner7LcuDZReZ3TG4uYmiWfXP_rBbEHcEgvL_E3gjPm4zBbSrs6i-q7xoyI5cRsMTrG0BS1cirtaCPgWHRi3yRMvH9PjZSYlF_YT44HIThAzCVyIxa5o20hC1S2MM7pMtPrsWb4ynR1mXNp_8DE9N7GaUyP5ldUep7TmNbqQ-1qvHCiAdv996L1Jjnw7Xc?session=0&fife]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -121.7589547,38.5427932,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trashcan #14</name>
+        <description><![CDATA[<img src="https://doc-0o-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/mhh7phm01ks6k7564mslj4j6v0/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgqntxelIEjXYFtIKKqX2vU8KrizoN4rzzKa9D9ZrUBMga2P2zz1ZssIHKrlBKFVv1MSdhR2kOCa1rbR6LJISRg_6Y49FmPDxE9DfV4PpVnZB8UxL9nXrK4FevSCvJGyttLt4GQZiwh4IKBRPFAYQejUFhGjtgQK5EPO31O8hEoMNkTiUyFi9cwA5HXf7XXADKAcLOo6Nv05VenLmDavDrRXJHKC2StWpKxNn70gxskgXys?session=0&fife" height="200" width="auto" /><br><br>By the tree by the bus stop<br><br>Regular Trash]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://doc-0o-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/mhh7phm01ks6k7564mslj4j6v0/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgqntxelIEjXYFtIKKqX2vU8KrizoN4rzzKa9D9ZrUBMga2P2zz1ZssIHKrlBKFVv1MSdhR2kOCa1rbR6LJISRg_6Y49FmPDxE9DfV4PpVnZB8UxL9nXrK4FevSCvJGyttLt4GQZiwh4IKBRPFAYQejUFhGjtgQK5EPO31O8hEoMNkTiUyFi9cwA5HXf7XXADKAcLOo6Nv05VenLmDavDrRXJHKC2StWpKxNn70gxskgXys?session=0&fife]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -121.7501785,38.5438315,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trashcan #15</name>
+        <description><![CDATA[<img src="https://doc-0o-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/rnuhu1dpihba8mbdseerdcfcgg/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgqT0XUTYu6YPNZ6gkn6kV-7woUtfcKUeXwDY5wMckO2dskaOhQ9mKjqQGLBaZACVA9JXGRA3Be1oUrYXUZPZzxERWgKzgtmcpwrCYv0OgsUevSMyrJd_o-VIN-uBDF9zhj1HXJEZyAD9tVmHEnYQQGrCEK5KcMS6VQ8AJ89vQS5x1ZoN3kJVFFkRHB-DgPyc2fXTBBfIqXAa2nJTaKCUA3ar-7oEd60X_LT2RIJsDXJdDw?session=0&fife" height="200" width="auto" /><br><br>By Entrance of Quad Parking Structure<br><br>Recycling]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://doc-0o-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/rnuhu1dpihba8mbdseerdcfcgg/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgqT0XUTYu6YPNZ6gkn6kV-7woUtfcKUeXwDY5wMckO2dskaOhQ9mKjqQGLBaZACVA9JXGRA3Be1oUrYXUZPZzxERWgKzgtmcpwrCYv0OgsUevSMyrJd_o-VIN-uBDF9zhj1HXJEZyAD9tVmHEnYQQGrCEK5KcMS6VQ8AJ89vQS5x1ZoN3kJVFFkRHB-DgPyc2fXTBBfIqXAa2nJTaKCUA3ar-7oEd60X_LT2RIJsDXJdDw?session=0&fife]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -121.7497252,38.544146,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trashcan #16</name>
+        <description><![CDATA[<img src="https://doc-0s-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/6ngq3oaiqnqmfe6f0g4503l3rs/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgpOgsJ-WC6nTcccKCrKG4gc4s9XlU_-Wa6Ys7sAQfL8qvqkTXFUnwg4f4UpJ6JWMwPKd2jMBqCRH7bfBc5fizk8RjlubSJugJAEbSULdpW9AMiyAEYnjQfJxZcq8HynemW-qzQATZNAJ-_EJuOhoes828WSgCHfN1bX-hBkLLNYz3A_6lhIrdjKWnUFtV0qrrwAW9AJhtbwptlDHfMcBi75cGnMWExkX8gnz3iS_W4f8JQ?session=0&fife" height="200" width="auto" /><br><br>By bus stop<br><br>Regular Trash]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://doc-0s-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/6ngq3oaiqnqmfe6f0g4503l3rs/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgpOgsJ-WC6nTcccKCrKG4gc4s9XlU_-Wa6Ys7sAQfL8qvqkTXFUnwg4f4UpJ6JWMwPKd2jMBqCRH7bfBc5fizk8RjlubSJugJAEbSULdpW9AMiyAEYnjQfJxZcq8HynemW-qzQATZNAJ-_EJuOhoes828WSgCHfN1bX-hBkLLNYz3A_6lhIrdjKWnUFtV0qrrwAW9AJhtbwptlDHfMcBi75cGnMWExkX8gnz3iS_W4f8JQ?session=0&fife]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -121.7497947,38.5436495,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trashcan #17</name>
+        <description><![CDATA[By bike rack<br><br>Regular Trash & Recycling]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -121.74954,38.5434816,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trashcan #18</name>
+        <description><![CDATA[<img src="https://doc-04-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/43s1t6t5dtjlhvsknrua77373o/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgpuRLQUTWdNTtKus1vVvdZ-1GRUSf3FTY_SZ0jxEOn29eEv9G8GV70CeQXkr4qwZR0-st7Y4i9H6cEo3YKGgJj8ABsSwjyfg3dtKd3cYxitFch-nUrfTC83AV28vSuYvpCRnMHAAgvdEMCFSmdR9qiHVuTTZ3MrPZvX0yKr1nPenqqkAwpZ394ekMvH5ILDcpelTXM89pKZOPo5RXJUVO-oZ2wGZ7JZ5i6ZkZpFvJG88J4?session=0&fife" height="200" width="auto" /><br><br>Recycling & Garbage]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://doc-04-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/43s1t6t5dtjlhvsknrua77373o/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgpuRLQUTWdNTtKus1vVvdZ-1GRUSf3FTY_SZ0jxEOn29eEv9G8GV70CeQXkr4qwZR0-st7Y4i9H6cEo3YKGgJj8ABsSwjyfg3dtKd3cYxitFch-nUrfTC83AV28vSuYvpCRnMHAAgvdEMCFSmdR9qiHVuTTZ3MrPZvX0yKr1nPenqqkAwpZ394ekMvH5ILDcpelTXM89pKZOPo5RXJUVO-oZ2wGZ7JZ5i6ZkZpFvJG88J4?session=0&fife]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -121.7590788,38.5422342,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trashcan #19</name>
+        <description><![CDATA[<img src="https://doc-14-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/cqbtjkmtgj19dtgu3tdff5r5ac/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgri_fPhpMg4RQT1eoo-1eUs2jly7vksd-4wm2ovLa56eVSdGVzaqio2TqwU1qD19TvYpPjHlcrA3wtq4MB5Youvo4R9O4bSVVxzz35wp46Hqnp2N8p2VyVArsb31DdLrVOcig4pBx3269eN2IcwSHaGDWX-tU5WXCh0r_JyJLcXvFkymqWj6PDaZM1HVQPENgGgmdzDbl4W97SnvyhYgBUHD2Vwt1GcBY3RmTVEXaPMf9g?session=0&fife" height="200" width="auto" /><br><br>Recycling & Garbage]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://doc-14-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/cqbtjkmtgj19dtgu3tdff5r5ac/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgri_fPhpMg4RQT1eoo-1eUs2jly7vksd-4wm2ovLa56eVSdGVzaqio2TqwU1qD19TvYpPjHlcrA3wtq4MB5Youvo4R9O4bSVVxzz35wp46Hqnp2N8p2VyVArsb31DdLrVOcig4pBx3269eN2IcwSHaGDWX-tU5WXCh0r_JyJLcXvFkymqWj6PDaZM1HVQPENgGgmdzDbl4W97SnvyhYgBUHD2Vwt1GcBY3RmTVEXaPMf9g?session=0&fife]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -121.7591844,38.5424329,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trashcan #20</name>
+        <description><![CDATA[<img src="https://doc-0o-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/38oauqqe88k24fajh7l99poca0/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgpoM43VtYLFmNUHK1jBgP8FbqxMDs9-89YbkdCjtkz9DaBV2Mb1AabJ0e61TUzkWTCqz93OkkZ5Cql4v9QnhS3DJBaktVEMHvB_QacVe4Rto0Srv1StzIznzY9ZBJPyHX5X8XN_uo2BTJD0x6bdKo2JVJtKnZcefCEeYD4tCWncUVx6NYdX_NVAyeM2GWbfBUp6E6wIncWG5xX-DHEIsX2J7okvTmmr-Ykt9qQ4JNfoIQw?session=0&fife" height="200" width="auto" /><br><br>By the entrance to TAPS<br><br>Recycling & Garbage]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://doc-0o-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/38oauqqe88k24fajh7l99poca0/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgpoM43VtYLFmNUHK1jBgP8FbqxMDs9-89YbkdCjtkz9DaBV2Mb1AabJ0e61TUzkWTCqz93OkkZ5Cql4v9QnhS3DJBaktVEMHvB_QacVe4Rto0Srv1StzIznzY9ZBJPyHX5X8XN_uo2BTJD0x6bdKo2JVJtKnZcefCEeYD4tCWncUVx6NYdX_NVAyeM2GWbfBUp6E6wIncWG5xX-DHEIsX2J7okvTmmr-Ykt9qQ4JNfoIQw?session=0&fife]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -121.7587609,38.5405771,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trashcan #21</name>
+        <description><![CDATA[<img src="https://doc-0c-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/idskr8rq8h3u5ej0snuasoac3s/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgplIU8VeRPCHJ8jcq3_GFqQKYuPiAi_cX7FLz6NgnX5WNvLa_UQCLw2V2sKwHGThASSNdT9e-nRIyLR1XIehC0RsESgON4vtFrRbzMtJsf-XCXU8bojYX1iED7e0YLuKSEv1I_xruyHGLw7690q5aghf7H0tAO6oSL2kI3UpF9cmBTYu3PijSiuocI_IAlBirbQjYtgmOMlWpiTg21NRJE2EdvRi1vuhDqZwwg74FquSJk?session=0&fife" height="200" width="auto" /><br><br>Recycling & Garbage]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://doc-0c-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/idskr8rq8h3u5ej0snuasoac3s/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgplIU8VeRPCHJ8jcq3_GFqQKYuPiAi_cX7FLz6NgnX5WNvLa_UQCLw2V2sKwHGThASSNdT9e-nRIyLR1XIehC0RsESgON4vtFrRbzMtJsf-XCXU8bojYX1iED7e0YLuKSEv1I_xruyHGLw7690q5aghf7H0tAO6oSL2kI3UpF9cmBTYu3PijSiuocI_IAlBirbQjYtgmOMlWpiTg21NRJE2EdvRi1vuhDqZwwg74FquSJk?session=0&fife]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -121.7586834,38.5391118,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trashcan #22</name>
+        <description><![CDATA[<img src="https://doc-10-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/ha6q3sa6egboqkq2q5rk8bnom0/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgrM9vFtIgtT70K7Q1uUqOTFPD4YsStIn6DLgGo0_r3212iTKV6KzSLomcDAqKeWTmoxxHQc3GsgTWFvevBck6RyWwVAdkEg2-I--9Z8tuQK1NlxdUtJxmY4LRhBeCjFQpd6RKmt41gSilL0TokFTlHkBpiUa5fSmgPSurlBWgP4xw0EEIxhUwWAUxQV5Frehd9TyWA0Ob8bYhtVwjnY2EK68-zENHKkN9F5ahvwZUcHzZY?session=0&fife" height="200" width="auto" /><br><br>Recycling & Garbage<br><br>By entrance to Khaira Hall]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://doc-10-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/ha6q3sa6egboqkq2q5rk8bnom0/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgrM9vFtIgtT70K7Q1uUqOTFPD4YsStIn6DLgGo0_r3212iTKV6KzSLomcDAqKeWTmoxxHQc3GsgTWFvevBck6RyWwVAdkEg2-I--9Z8tuQK1NlxdUtJxmY4LRhBeCjFQpd6RKmt41gSilL0TokFTlHkBpiUa5fSmgPSurlBWgP4xw0EEIxhUwWAUxQV5Frehd9TyWA0Ob8bYhtVwjnY2EK68-zENHKkN9F5ahvwZUcHzZY?session=0&fife]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -121.7560312,38.5392495,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trashcan #23</name>
+        <description><![CDATA[<img src="https://doc-0g-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/pgbaao7b3hn43dqf2v41d912q8/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgo5jRyYQhRNSHGIQ7sY0Vz4p0nkmoBC-4zf_fQcE2piMCvNJccSKXuaMpS4Rhfiutw6F6MFyIfNlT7xDxi2nkIh1TlkMvYNKwGHr5tZilaMldH_2Z3dVeLzp3t1QCQ8Jy3znkULKZtpFgER20vAkIOatoA4MDLk7jpvob9J7laBHI3gQEpGEG5aWVyvSdx5-GaY-WF0C8v8AbGdLiILZ1rkg3UkwRxQSqMMvSCZxXCL7OU?session=0&fife" height="200" width="auto" /><br><br>Entrance to SciLab building<br><br>Recycling & Garbage]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://doc-0g-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/pgbaao7b3hn43dqf2v41d912q8/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgo5jRyYQhRNSHGIQ7sY0Vz4p0nkmoBC-4zf_fQcE2piMCvNJccSKXuaMpS4Rhfiutw6F6MFyIfNlT7xDxi2nkIh1TlkMvYNKwGHr5tZilaMldH_2Z3dVeLzp3t1QCQ8Jy3znkULKZtpFgER20vAkIOatoA4MDLk7jpvob9J7laBHI3gQEpGEG5aWVyvSdx5-GaY-WF0C8v8AbGdLiILZ1rkg3UkwRxQSqMMvSCZxXCL7OU?session=0&fife]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -121.7548487,38.5392727,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trashcan #24</name>
+        <description><![CDATA[<img src="https://doc-0g-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/n4aq3fcib7ka4v6eea3lelqkv8/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgpoGbfEL_HoCAA-nz4jq1dVjHkmfFft-efVml7iaWF-Ut24PyXNHHjrb-k8Mb923RrL3ev8UDO8JlF1r0FDlxCefUJQI51gBmuc4Z3O84X0KHuTEJQJ8zUjj2Xd37IY7AIrrNScU85hyEcbmKn0tcioa0qysCnoo6WI4PyRRaexpc02tXXIQB9Rw5SdFA3lzZTmS9I3Gdr4d8FfukdHnKA9zAxIwpuoBqgAoPAP1_fIwrc?session=0&fife" height="200" width="auto" /><br><br>By the bike racks,<br><br>Recycling & Garbage]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://doc-0g-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/n4aq3fcib7ka4v6eea3lelqkv8/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgpoGbfEL_HoCAA-nz4jq1dVjHkmfFft-efVml7iaWF-Ut24PyXNHHjrb-k8Mb923RrL3ev8UDO8JlF1r0FDlxCefUJQI51gBmuc4Z3O84X0KHuTEJQJ8zUjj2Xd37IY7AIrrNScU85hyEcbmKn0tcioa0qysCnoo6WI4PyRRaexpc02tXXIQB9Rw5SdFA3lzZTmS9I3Gdr4d8FfukdHnKA9zAxIwpuoBqgAoPAP1_fIwrc?session=0&fife]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -121.755023,38.539287,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trashcan #25</name>
+        <description><![CDATA[<img src="https://doc-0g-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/tn5l797mdokdpcpaenrtdlbtc4/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgoIoXBs3UVyhtknpYGQ8t-fyEVhmzm4zo7-oY-40E-F7Yj4Z_u1UGqUUOZHjjHGxVl5091nrFMax4EBbNw3zH2YVWKTLeEos5lwgV2jcUp2nsHUapT05_sVgbl1aYrq0Rw1ReMC0aUbgKwXwA9ad4z2tiGasfV8rIlLQYRRT1JvGdG1FTLNtbJpbpIRIQiXdXv41bY3L3avDaXwCnI4w3Ef-n_oWYcu2FAqSpa-v37v0j0?session=0&fife" height="200" width="auto" /><br><br>By entrance to Khaira Hall<br><br>Recycling & Garbage]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://doc-0g-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/tn5l797mdokdpcpaenrtdlbtc4/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgoIoXBs3UVyhtknpYGQ8t-fyEVhmzm4zo7-oY-40E-F7Yj4Z_u1UGqUUOZHjjHGxVl5091nrFMax4EBbNw3zH2YVWKTLeEos5lwgV2jcUp2nsHUapT05_sVgbl1aYrq0Rw1ReMC0aUbgKwXwA9ad4z2tiGasfV8rIlLQYRRT1JvGdG1FTLNtbJpbpIRIQiXdXv41bY3L3avDaXwCnI4w3Ef-n_oWYcu2FAqSpa-v37v0j0?session=0&fife]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -121.755579,38.5394532,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trashcan #26</name>
+        <description><![CDATA[<img src="https://doc-0s-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/2u6qle22ftr7ojt8ugc84o77qs/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgps9KgpYUVdN6pWKNVkWwU_RGqCQvSc0GG3usT3NBZ8sK_RCbkY8fGD98jIgGQjrZQp1SGAk7lHH0UL6aesNI13PsYHIaPSCfNcyHYDhBgv6BwoaeVXC3BgS2Ijb7LBBgo1r7-FCZ1Cz-BcTSScS7-LXQ2vS5R8_B8DxsiXeyWthVasKmZa7XTRHp_zzQUsf36EI8phSgynYQmaiEv4Kc0Yaonl9K9YLVdO3BDDEm2Gbb8?session=0&fife" height="200" width="auto" /><br><br>By western entrance to SciLab<br><br>Recycling]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://doc-0s-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/2u6qle22ftr7ojt8ugc84o77qs/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgps9KgpYUVdN6pWKNVkWwU_RGqCQvSc0GG3usT3NBZ8sK_RCbkY8fGD98jIgGQjrZQp1SGAk7lHH0UL6aesNI13PsYHIaPSCfNcyHYDhBgv6BwoaeVXC3BgS2Ijb7LBBgo1r7-FCZ1Cz-BcTSScS7-LXQ2vS5R8_B8DxsiXeyWthVasKmZa7XTRHp_zzQUsf36EI8phSgynYQmaiEv4Kc0Yaonl9K9YLVdO3BDDEm2Gbb8?session=0&fife]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -121.7551074,38.5398403,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trashcan #27</name>
+        <description><![CDATA[<img src="https://doc-10-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/t6u72k82s5fuq2alrqq6lu51s0/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgqgeY29YZ2DYMaRMOspTATDSwpm2Q_RAQCM_P_N8FN6mrGCsCcQF4OUMnqbEuy4kiafozVb9_8jGJSE1e333ahLDlFuk_3JQcZaX0_PGE40Gh8_gPC-_y1DHlllbFZ38XvP8uZADm0H-mBkSQNfca_v3E9vc0IRcVEVZphMx_GSGQKj4Sksb5PM9u1Y9_QKfEOswuxDhqNeM6D98Dr7nqNvp6uYoSJC61IDDnA8CGIg9r8?session=0&fife" height="200" width="auto" /><br><br>By entrance to Briggs Hall<br><br>Recycling & Trash]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://doc-10-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/t6u72k82s5fuq2alrqq6lu51s0/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgqgeY29YZ2DYMaRMOspTATDSwpm2Q_RAQCM_P_N8FN6mrGCsCcQF4OUMnqbEuy4kiafozVb9_8jGJSE1e333ahLDlFuk_3JQcZaX0_PGE40Gh8_gPC-_y1DHlllbFZ38XvP8uZADm0H-mBkSQNfca_v3E9vc0IRcVEVZphMx_GSGQKj4Sksb5PM9u1Y9_QKfEOswuxDhqNeM6D98Dr7nqNvp6uYoSJC61IDDnA8CGIg9r8?session=0&fife]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -121.7557869,38.5401016,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trashcan #28</name>
+        <description><![CDATA[<img src="https://doc-0g-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/2cql8vleagpiqft61daksajar0/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgqU4v9IvfXC6zUfA32P3L24ftSqltuguor5iHKVw3anhI8Sfcx7muzJXIaI2Qnvd1l4DO97bNBZ6sEjQ3eHYGcoNZTtDzNNe3l9cnn7XyQxnKkfBRLIaXajKgUGA7HgGcTsNgjcv2ZtElRK6bKIsLUzFtAnbgglAIhIl0Lc1s5fJTeh6x0knr8Vs4W5_p5RpXs7anhRwowlq1h4cQ2hHB35iz0Dx_qSTYU5XTWRSKz5YSI?session=0&fife" height="200" width="auto" /><br><br>By entrance to Kleiber Hall<br><br>Recycling & Garbage]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://doc-0g-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/2cql8vleagpiqft61daksajar0/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgqU4v9IvfXC6zUfA32P3L24ftSqltuguor5iHKVw3anhI8Sfcx7muzJXIaI2Qnvd1l4DO97bNBZ6sEjQ3eHYGcoNZTtDzNNe3l9cnn7XyQxnKkfBRLIaXajKgUGA7HgGcTsNgjcv2ZtElRK6bKIsLUzFtAnbgglAIhIl0Lc1s5fJTeh6x0knr8Vs4W5_p5RpXs7anhRwowlq1h4cQ2hHB35iz0Dx_qSTYU5XTWRSKz5YSI?session=0&fife]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -121.7551968,38.5406759,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trashcan #29</name>
+        <description><![CDATA[<img src="https://doc-0c-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/rvt6tc2ud0ln4c13s4gk6agp0c/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgpfCTB3g2-Qxy02bVeIC9dAe1l2KIalaaXGu5sayVAQeYPYGibbtdmsqImH-SlOV2Mk0tN8YMSAbXqFNH9rSmveXORTiw3hIZd4WMbVYiivgi6eKk9koIptFyKa8fEaRhhEvUzUKVzflgUiiLMj6r1GlNU1gRk70BoVo3Jvb73mYKT2H_hd4qvLx9RdQ8klSHcQyuO-jfy_8A6hWDJqmAOz7kvcqX0v5vRxFAJeNKVj9Bo?session=0&fife" height="200" width="auto" /><br><br>By northern entrance to SciLab<br><br>Recycling & Garbage]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://doc-0c-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/rvt6tc2ud0ln4c13s4gk6agp0c/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgpfCTB3g2-Qxy02bVeIC9dAe1l2KIalaaXGu5sayVAQeYPYGibbtdmsqImH-SlOV2Mk0tN8YMSAbXqFNH9rSmveXORTiw3hIZd4WMbVYiivgi6eKk9koIptFyKa8fEaRhhEvUzUKVzflgUiiLMj6r1GlNU1gRk70BoVo3Jvb73mYKT2H_hd4qvLx9RdQ8klSHcQyuO-jfy_8A6hWDJqmAOz7kvcqX0v5vRxFAJeNKVj9Bo?session=0&fife]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -121.7546617,38.5403963,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trashcan #30</name>
+        <description><![CDATA[<img src="https://doc-00-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/d21amrfvgbpq9oc304okuu4uik/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgq7f8GnzAF3Ii4adFu36nWfAKQSWXzZ1zw2oSvpbqydEd5n1HhR2Zg0WkYejkeL1GF0hys7dk9vvaqir3sR71OemL5n2y2dJmInx0yg7lxhGaOWmmbOb53BMIsCMjX6xmRAtuLhHONlpcYzbSF7SPYMerfbJNoGePFNh2zfUJbVNBW6VzNBnmNx7LGn2HWd-j-V3rdvRPIBF41uKersvJLsJFzw4dnLkggC9T1FlpPdHQA?session=0&fife" height="200" width="auto" /><br><br>Regular Trash]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://doc-00-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/d21amrfvgbpq9oc304okuu4uik/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgq7f8GnzAF3Ii4adFu36nWfAKQSWXzZ1zw2oSvpbqydEd5n1HhR2Zg0WkYejkeL1GF0hys7dk9vvaqir3sR71OemL5n2y2dJmInx0yg7lxhGaOWmmbOb53BMIsCMjX6xmRAtuLhHONlpcYzbSF7SPYMerfbJNoGePFNh2zfUJbVNBW6VzNBnmNx7LGn2HWd-j-V3rdvRPIBF41uKersvJLsJFzw4dnLkggC9T1FlpPdHQA?session=0&fife]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -121.7541262,38.540715,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trashcan #31</name>
+        <description><![CDATA[<img src="https://doc-0g-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/augl7ht7nicurvmlb098jh2mko/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgpOB4bBQ2BeZClvL2v7dXoCvfhy6qcZ3EYcK0nmMCYC3hNDpxwn9T8C13DSIqDgCA3QBlsSX1GyEg2gJAp0-sKzsbvyZTVLtohA4wCBMxVyth8Pd3GXy_Q8jx2t8IYcRjgWFSuhfO9xJS0YRdrHdsSOv_j_i4D_uJ-XzuKtctmJi5XNxReFkmvKiLwPu9rcBIw8wjMSz2pz7IwQzdXT59t3KKfs25RhXFo66zyJPHU8kBQ?session=0&fife" height="200" width="auto" /><br><br>close to Hutchison Hall entrance<br><br>Recycling & Garbage]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://doc-0g-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/augl7ht7nicurvmlb098jh2mko/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgpOB4bBQ2BeZClvL2v7dXoCvfhy6qcZ3EYcK0nmMCYC3hNDpxwn9T8C13DSIqDgCA3QBlsSX1GyEg2gJAp0-sKzsbvyZTVLtohA4wCBMxVyth8Pd3GXy_Q8jx2t8IYcRjgWFSuhfO9xJS0YRdrHdsSOv_j_i4D_uJ-XzuKtctmJi5XNxReFkmvKiLwPu9rcBIw8wjMSz2pz7IwQzdXT59t3KKfs25RhXFo66zyJPHU8kBQ?session=0&fife]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -121.7530217,38.5410283,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trashcan #32</name>
+        <description><![CDATA[California Hall<br><br>Recycling & Garbage]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -121.752866,38.5412581,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trashcan #33</name>
+        <description><![CDATA[<img src="https://doc-0g-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/h2meteqof506b0jeloc61ke29k/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgpWetQOkm5MAf_vY_DxGq-H65kdYyCo_wCMu900Aa5I4gKIapQb5HjOpw9OFeBE9AZ0DdJJotDiwuiLnMF01S6vfMnDmRHgxkOwo-vL856JsyQ3EPtP6z--_5Yvly-y9OEcsCvt7KGfYArElViguuoOvysi3Frv7fO4kyHMOd5rkhYi_mekraZQjxrsdWVM_bsePgjL-wpLosbPqEEuLspTFDSF0Fe4TWgHMoJBjpvbR3E?session=0&fife" height="200" width="auto" /><br><br>Entrance to Asmundson Hall<br><br>Recycling & Garbage<br><br><img src="https://doc-04-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/2521f1jji6luq9k1f1lb0600po/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgrDUUjQs-Jb4TBnyOuS4w_us7MVKT9MKJrHGptFv1vEWnahnnzwcMZIw4wxA1AziYFS6piKeEUKIRPLeHLtHLrTbF3dgrcYinCudvyDR-PqdCl31m1GTzypb1MTv203vxFz8b-L78HqldZRAFnhBHAf4gExbtR0t4q_wpudxHasNPMW-Bv3U-cLlLp5Dsf_BZBv9i62xBCb23ZK-gq5z6vhwDTosPWpqtl9zrdz3nZGwuE?session=0&fife" height="200" width="auto" />]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://doc-0g-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/h2meteqof506b0jeloc61ke29k/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgpWetQOkm5MAf_vY_DxGq-H65kdYyCo_wCMu900Aa5I4gKIapQb5HjOpw9OFeBE9AZ0DdJJotDiwuiLnMF01S6vfMnDmRHgxkOwo-vL856JsyQ3EPtP6z--_5Yvly-y9OEcsCvt7KGfYArElViguuoOvysi3Frv7fO4kyHMOd5rkhYi_mekraZQjxrsdWVM_bsePgjL-wpLosbPqEEuLspTFDSF0Fe4TWgHMoJBjpvbR3E?session=0&fife https://doc-04-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/2521f1jji6luq9k1f1lb0600po/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgrDUUjQs-Jb4TBnyOuS4w_us7MVKT9MKJrHGptFv1vEWnahnnzwcMZIw4wxA1AziYFS6piKeEUKIRPLeHLtHLrTbF3dgrcYinCudvyDR-PqdCl31m1GTzypb1MTv203vxFz8b-L78HqldZRAFnhBHAf4gExbtR0t4q_wpudxHasNPMW-Bv3U-cLlLp5Dsf_BZBv9i62xBCb23ZK-gq5z6vhwDTosPWpqtl9zrdz3nZGwuE?session=0&fife]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -121.7530108,38.5419407,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trashcan #34</name>
+        <description><![CDATA[<img src="https://doc-0c-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/rkvqdsopegcd9qs5rcstce089c/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgqkaqJ6nFbyWTUP_ikyigM2VGc7kEKwSOMg79stx893vl76DTAWPmbLh4ifuk9ea1fBzJzhvCEsohJ4XmQto4be_cLLgkKHKOd5exY5C-m_hB7c_wbsKdRRCTAk_mfx_MxtY8LNqkvj4LL5S4TMKpssht_VVqGWI2_oQpSth4WpGKTXJ7GJbW7gtz4XRRD7ThL2HGbNYeJOXyPll-OOcU66GMYxD-6Se0yUR3PBF6i8emo?session=0&fife" height="200" width="auto" /><br><br>By roundabout<br><br>Recycling & Garbage]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://doc-0c-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/rkvqdsopegcd9qs5rcstce089c/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgqkaqJ6nFbyWTUP_ikyigM2VGc7kEKwSOMg79stx893vl76DTAWPmbLh4ifuk9ea1fBzJzhvCEsohJ4XmQto4be_cLLgkKHKOd5exY5C-m_hB7c_wbsKdRRCTAk_mfx_MxtY8LNqkvj4LL5S4TMKpssht_VVqGWI2_oQpSth4WpGKTXJ7GJbW7gtz4XRRD7ThL2HGbNYeJOXyPll-OOcU66GMYxD-6Se0yUR3PBF6i8emo?session=0&fife]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -121.7530884,38.5424231,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trashcan #35</name>
+        <description><![CDATA[<img src="https://doc-08-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/csd6a3qd7dbdpfqn0vqddk77s0/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgqdrJbywruKHsCYnelnIpPumLVjBCO0TgWx3rs_vxkewZM6M6bcAJqmIw4ffyN2fTH9CutgUvT6XkNw0-WO7hI2Cj_OmXQ5zo9sSrVMTo9nGtS7gQMs1pOEufoDto72kL0iLMZsbKtK1haVosDslfdG-jmrcZ72nFrPUILBsIehnFCa5X6XpvP60QYL9tq2R1a-SIcpB7CQfTGHHSi1_bWZcE1T-Yb0tRAakSQABUssxcU?session=0&fife" height="200" width="auto" /><br><br>Recycling & Trash]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://doc-08-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/csd6a3qd7dbdpfqn0vqddk77s0/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgqdrJbywruKHsCYnelnIpPumLVjBCO0TgWx3rs_vxkewZM6M6bcAJqmIw4ffyN2fTH9CutgUvT6XkNw0-WO7hI2Cj_OmXQ5zo9sSrVMTo9nGtS7gQMs1pOEufoDto72kL0iLMZsbKtK1haVosDslfdG-jmrcZ72nFrPUILBsIehnFCa5X6XpvP60QYL9tq2R1a-SIcpB7CQfTGHHSi1_bWZcE1T-Yb0tRAakSQABUssxcU?session=0&fife]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -121.7522961,38.5408979,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trashcan #36</name>
+        <description><![CDATA[<img src="https://doc-04-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/13ioceg5983cc4di21eiitr9nk/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgoFebuY9iJ5q_V7iEdsIDqt23LfdnBPSalnCShzPCbAo0u00B0AaVYcqYUT-Hj-iQwZh82UfOVNOFe-kSz5wyb8b8hvno4yXLptgNsc-RN2Ck5fKJjlSXSJg7eLU39d7-369THHlLHnt0xQa5vqLFRiSEvm44PTVDG8rnRXwr3SA-XVQMB0LFV_SS8bickQx2E7P_j6_zBxANwjqJci1AWf1zoFX5QuShoFAdOB43rEU8I?session=0&fife" height="200" width="auto" /><br><br>Outside west entrance of Wellman hall<br><br>Recycling & Trash]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://doc-04-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/13ioceg5983cc4di21eiitr9nk/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgoFebuY9iJ5q_V7iEdsIDqt23LfdnBPSalnCShzPCbAo0u00B0AaVYcqYUT-Hj-iQwZh82UfOVNOFe-kSz5wyb8b8hvno4yXLptgNsc-RN2Ck5fKJjlSXSJg7eLU39d7-369THHlLHnt0xQa5vqLFRiSEvm44PTVDG8rnRXwr3SA-XVQMB0LFV_SS8bickQx2E7P_j6_zBxANwjqJci1AWf1zoFX5QuShoFAdOB43rEU8I?session=0&fife]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -121.7517141,38.5412231,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trashcan #37</name>
+        <description><![CDATA[<img src="https://doc-10-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/4eifloevk95j6131lis6buolf8/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgqSTYL0156JqdmxozwlswtADDdh4NnonENYaN7N8pvYXzivOCfJjBFqrxhr0RtN3RGNfQeAPua10Q980VibQ_5cACangYa-k4fLb3alc5TApaengiPtKg5lPsF5k0YfHMRdqBshRFPXklkmdwb8RCN5VDpMs2AThY5XYBQ6_3pOBi01flYC6TC2A4ACWFRFR7i0v_KCz1vWb36SAVgBHgCulb123EBdnwm3Mzo0Olzm0GU?session=0&fife" height="200" width="auto" /><br><br>South entrance of Wickson Hall<br><br>Recycling & Trash]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://doc-10-4o-mymaps.googleusercontent.com/untrusted/hostedimage/m/d6qe8p87kjctid76kp2m7t141k/4eifloevk95j6131lis6buolf8/1714290337500/_Qh-nrZnOqS3483g1H2WAKzifppEJY6b/07595310390857868408/5AHUGKgqSTYL0156JqdmxozwlswtADDdh4NnonENYaN7N8pvYXzivOCfJjBFqrxhr0RtN3RGNfQeAPua10Q980VibQ_5cACangYa-k4fLb3alc5TApaengiPtKg5lPsF5k0YfHMRdqBshRFPXklkmdwb8RCN5VDpMs2AThY5XYBQ6_3pOBi01flYC6TC2A4ACWFRFR7i0v_KCz1vWb36SAVgBHgCulb123EBdnwm3Mzo0Olzm0GU?session=0&fife]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -121.7517497,38.541783,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

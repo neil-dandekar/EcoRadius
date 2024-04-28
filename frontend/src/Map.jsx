@@ -4,17 +4,22 @@ import { LoadScript, GoogleMap, KmlLayer } from "@react-google-maps/api";
 const Map = () => {
   const [cds, setCoords] = useState({ lat: 0, lng: 0 });
 
-  const geoLocate = () => {
-    navigator.geolocation.getCurrentPosition((position) => {
+  const geoLocate = (position) => {
+      console.log(position.coords.latitude, position.coords.longitude)
+      setCoords({
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      });
+    /* navigator.geolocation.getCurrentPosition((position) => {
       setCoords({
         lat: position.coords.latitude,
         lng: position.coords.longitude,
       });
-    });
+    }); */
   };
 
-    const geoLocateErr = () => {
-        console.log("Error occurred with geolocation measurement!!!");
+    const geoLocateErr = (err) => {
+        console.log("Error occurred with geolocation measurement!!!: ", err.message);
     }
     
     // get position

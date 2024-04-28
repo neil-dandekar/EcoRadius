@@ -25,3 +25,4 @@ dist-ssr
 
 # Ignore Python virtual environment
 test-ml-model/
+venv/

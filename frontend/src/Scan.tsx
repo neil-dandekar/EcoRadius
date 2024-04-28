@@ -47,6 +47,7 @@ const Scan = () => {
             bin = "compostable";
             break;
         }
+        console.log(bin);
         setBintype(bin);
       })
       .catch((error) => {

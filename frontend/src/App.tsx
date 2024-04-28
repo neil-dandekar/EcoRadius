@@ -1,14 +1,15 @@
-
-import Scan from "./Scan.tsx";
-import Map from "./Map.jsx";
+import React, { useState } from "react";
+import Scan from "./Scan";
+import Map from "./Map";
 
 export const App = () => {
-  return (
-    <>
-      <Scan />
-      <Map />
-    </>
-  );
+  const [showMap, setShowMap] = useState(false); // State to toggle between Scan and Map
+
+  const handleShowMap = () => {
+    setShowMap(true); // This will be called to show the Map after capture
+  };
+
+  return <>{!showMap ? <Scan onCaptureDone={handleShowMap} /> : <Map />}</>;
 };
 
 export default App;

@@ -1,62 +1,46 @@
 import "./Scan.css";
 import { useState, useRef, useEffect } from "react";
 
-const Scan = () => {
+const Scan = ({ onCaptureDone }) => {
   const [image, setImage] = useState<string>("");
   const [prediction, setPrediction] = useState<string>("None");
   const [bintype, setBintype] = useState<string>("None");
-  const [captured, setCaptured] = useState<boolean>(false);
+  const [captured, setCaptured] = useState<boolean>(false); // Adjusted the name for clarity
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    const startCamera = async () => {
-      try {
-        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-          const mediaStream = await navigator.mediaDevices.getUserMedia({
-            video: { facingMode: "environment" },
-          });
-          if (videoRef.current) {
-            videoRef.current.srcObject = mediaStream;
-            videoRef.current.onloadedmetadata = () => {
-              // Ensure the video element is still available when metadata is loaded
-              if (videoRef.current && canvasRef.current) {
-                canvasRef.current.width = videoRef.current.videoWidth;
-                canvasRef.current.height = videoRef.current.videoHeight;
-              }
-            };
-          }
-        }
-      } catch (error) {
-        console.error("Error accessing the camera:", error);
-      }
-    };
     startCamera();
     return () => {
-      if (videoRef.current) {
-        const tracks =
-          videoRef.current.srcObject instanceof MediaStream
-            ? videoRef.current.srcObject.getTracks()
-            : [];
-        tracks.forEach((track) => track.stop());
-      }
+      stopCamera(); // Ensures the camera is stopped when the component unmounts
     };
   }, []);
 
+  const startCamera = () => {
+    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+      navigator.mediaDevices
+        .getUserMedia({ video: { facingMode: "environment" } })
+        .then((mediaStream) => {
+          if (videoRef.current) {
+            videoRef.current.srcObject = mediaStream;
+          }
+        })
+        .catch((error) => {
+          console.error("Error accessing the camera:", error);
+        });
+    }
+  };
+
   const capture = () => {
-    if (canvasRef.current && videoRef.current) {
-      const context = canvasRef.current.getContext("2d");
+    const canvas = canvasRef.current;
+    const video = videoRef.current;
+    if (canvas && video) {
+      const context = canvas.getContext("2d");
       if (context) {
-        context.drawImage(
-          videoRef.current,
-          0,
-          0,
-          videoRef.current.videoWidth,
-          videoRef.current.videoHeight
-        );
-        const base64image = canvasRef.current.toDataURL("image/jpeg");
+        context.drawImage(video, 0, 0, canvas.width, canvas.height);
+        const base64image = canvas.toDataURL("image/jpeg");
         setImage(base64image);
-        setCaptured(true);
+        setCaptured(true); // Set captured state to true to switch UI
         sendToBackend(base64image);
       }
     }
@@ -73,7 +57,24 @@ const Scan = () => {
       .then((response) => response.json())
       .then((data) => {
         setPrediction(data.prediction);
-        const bin = determineBin(data.prediction);
+        let bin: string;
+        switch (data.prediction) {
+          case "glass":
+          case "cardboard":
+          case "plastic":
+          case "metal":
+            bin = "recyclable";
+            break;
+          case "trash":
+            bin = "landfill";
+            break;
+          case "paper":
+            bin = "compostable";
+            break;
+          default:
+            bin = "unknown";
+            break;
+        }
         setBintype(bin);
       })
       .catch((error) => {
@@ -83,26 +84,18 @@ const Scan = () => {
       });
   };
 
-  const determineBin = (prediction: string) => {
-    switch (prediction) {
-      case "glass":
-      case "cardboard":
-      case "plastic":
-      case "metal":
-        return "recyclable";
-      case "trash":
-        return "landfill";
-      case "paper":
-        return "compostable";
-      default:
-        return "unknown";
-    }
+  const stopCamera = () => {
+    const tracks =
+      videoRef.current?.srcObject instanceof MediaStream
+        ? videoRef.current.srcObject.getTracks()
+        : [];
+    tracks.forEach((track) => track.stop());
   };
 
   return (
     <>
       <div className="scanctr">
-        {!captured && (
+        {!captured ? (
           <>
             <video
               ref={videoRef}
@@ -112,8 +105,7 @@ const Scan = () => {
             ></video>
             <button onClick={capture}>Capture</button>
           </>
-        )}
-        {captured && (
+        ) : (
           <>
             <img
               src={image}
@@ -121,12 +113,18 @@ const Scan = () => {
               style={{ width: "100%", height: "auto" }}
             />
             <div>
-              Prediction: {prediction}
-              Bin Type: {bintype}
+              Prediction: {prediction}, Bin Type: {bintype}
             </div>
+            <button onClick={onCaptureDone}>Map</button>{" "}
+            {/* This button will switch to the Map view */}
           </>
         )}
-        <canvas ref={canvasRef} style={{ display: "none" }}></canvas>
+        <canvas
+          ref={canvasRef}
+          style={{ display: "none" }}
+          width="640"
+          height="480"
+        ></canvas>
       </div>
     </>
   );

@@ -78,8 +78,7 @@ const Scan = () => {
             style={{ width: "100%", height: "auto" }}
           />
         )}
-        Prediction: {prediction}
-        Bin Type: {bintype}
+        Prediction: {prediction}, Bin Type: {bintype}
       </div>
     </>
   );

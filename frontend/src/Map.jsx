@@ -27,11 +27,11 @@ const Map = () => {
         const interval = setInterval(() => {
             if("geolocation" in navigator){
                 navigator.geolocation.watchPosition(geoLocate, geoLocateErr, 
-                    {enableHighAccuracy: true, timeout: 1000, maximumAge: 0}
+                    {enableHighAccuracy: true, timeout: 10000, maximumAge: 0}
                  );
             }
             console.log(cds.lat, cds.lng)
-        }, 1000);
+        }, 10000);
         return () => clearInterval(interval)
     }, []);
 

@@ -40,7 +40,7 @@ const Map = () => {
     // <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIXoPr9hxhk7hs5PRlP9imymTuPC0TPzI&callback=initMap" async defer></script>
     // <div id="map"></div>
     return(
-        <LoadScript googleMapsApiKey='AIzaSyBIXoPr9hxhk7hs5PRlP9imymTuPC0TPzI'>
+        <LoadScript googleMapsApiKey={'AIzaSyBIXoPr9hxhk7hs5PRlP9imymTuPC0TPzI'}>
             <GoogleMap 
                 mapContainerStyle = {{width: '400px', height: '400px'}}
                 center = {cds}

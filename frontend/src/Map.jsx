@@ -47,7 +47,7 @@ const Map = () => {
         let minMarkerDist = Infinity
         let minMarker = null
         for(let i = 0; i < placemarks.length; i++){
-            coordsText = placemarks[i].getElementsByTagName("coordinates")
+            coordsText = placemarks[i].getElementsByTagName("coordinates")[0].textContent;
             coords = coordsText.trim().split(',').map(Number)
             singCoord = new google.maps.LatLng(coords[1],coords[0])
             dist = google.maps.geometry.spherical.computeDistanceBetween(cds, singCoord)

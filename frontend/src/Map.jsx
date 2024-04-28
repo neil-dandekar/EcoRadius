@@ -2,9 +2,6 @@ import React, { useState, useEffect } from "react";
 import { LoadScript, GoogleMap, KmlLayer, Marker } from "@react-google-maps/api";
 import {findNearest} from 'geolib';
 
-const google = window.google;
-
-
 const locArr = [
     { latitude: 38.5454983, longitude: -121.754064 },
     { latitude: 38.5451431, longitude: -121.7548268 },

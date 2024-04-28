@@ -10,42 +10,51 @@ const Scan = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    startCamera();
-    return () => {
-      stopCamera();
-    };
-  }, []);
-
-  const startCamera = () => {
-    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-      navigator.mediaDevices
-        .getUserMedia({ video: { facingMode: "environment" } })
-        .then((mediaStream) => {
+    const startCamera = async () => {
+      try {
+        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+          const mediaStream = await navigator.mediaDevices.getUserMedia({
+            video: { facingMode: "environment" },
+          });
           if (videoRef.current) {
             videoRef.current.srcObject = mediaStream;
             videoRef.current.onloadedmetadata = () => {
-              // Set the canvas size to the video size once it's loaded
-              if (canvasRef.current) {
+              // Ensure the video element is still available when metadata is loaded
+              if (videoRef.current && canvasRef.current) {
                 canvasRef.current.width = videoRef.current.videoWidth;
                 canvasRef.current.height = videoRef.current.videoHeight;
               }
             };
           }
-        })
-        .catch((error) => {
-          console.error("Error accessing the camera:", error);
-        });
-    }
-  };
+        }
+      } catch (error) {
+        console.error("Error accessing the camera:", error);
+      }
+    };
+    startCamera();
+    return () => {
+      if (videoRef.current) {
+        const tracks =
+          videoRef.current.srcObject instanceof MediaStream
+            ? videoRef.current.srcObject.getTracks()
+            : [];
+        tracks.forEach((track) => track.stop());
+      }
+    };
+  }, []);
 
   const capture = () => {
-    const canvas = canvasRef.current;
-    const video = videoRef.current;
-    if (canvas && video) {
-      const context = canvas.getContext("2d");
+    if (canvasRef.current && videoRef.current) {
+      const context = canvasRef.current.getContext("2d");
       if (context) {
-        context.drawImage(video, 0, 0, video.videoWidth, video.videoHeight);
-        const base64image = canvas.toDataURL("image/jpeg");
+        context.drawImage(
+          videoRef.current,
+          0,
+          0,
+          videoRef.current.videoWidth,
+          videoRef.current.videoHeight
+        );
+        const base64image = canvasRef.current.toDataURL("image/jpeg");
         setImage(base64image);
         setCaptured(true);
         sendToBackend(base64image);
@@ -88,14 +97,6 @@ const Scan = () => {
       default:
         return "unknown";
     }
-  };
-
-  const stopCamera = () => {
-    const tracks =
-      videoRef.current?.srcObject instanceof MediaStream
-        ? videoRef.current.srcObject.getTracks()
-        : [];
-    tracks.forEach((track) => track.stop());
   };
 
   return (

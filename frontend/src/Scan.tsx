@@ -63,16 +63,20 @@ const Scan: React.FC<ScanProps> = ({ onCaptureDone }) => {
         let bin: string;
         switch (data.prediction) {
           case "glass":
-          case "cardboard":
           case "plastic":
           case "metal":
-            bin = "recyclable";
+            bin = "recyclable bin.";
             break;
           case "trash":
-            bin = "landfill";
+            bin = "landfill bin.";
             break;
           case "paper":
-            bin = "compostable";
+            bin =
+              'recyclable bins. According to UC Davis Housing "all recyclables go into one bin, which is known as Mixed Recycling. In other words, you can put paper into the same bin as aluminum cans - no need to separate the items."';
+            break;
+          case "cardboard":
+            bin =
+              'cardboard or recyclable bins. According to UC Davis Housing "Corrugated cardboard boxes are collected separately from Mixed Recycling. When disposing of cardboard, please flatten and put in the proper bin to be recycled."';
             break;
           default:
             bin = "unknown";
@@ -101,12 +105,14 @@ const Scan: React.FC<ScanProps> = ({ onCaptureDone }) => {
         {!captured ? (
           <>
             <video
+              className="videoFeed"
               ref={videoRef}
               autoPlay
               playsInline
-              style={{ width: "100%", height: "auto" }}
             ></video>
-            <button onClick={capture}>Capture</button>
+            <button className="Capture" onClick={capture}>
+              Sort it!
+            </button>
           </>
         ) : (
           <>
@@ -115,10 +121,12 @@ const Scan: React.FC<ScanProps> = ({ onCaptureDone }) => {
               alt="Captured"
               style={{ width: "100%", height: "auto" }}
             />
-            <div>
-              Prediction: {prediction}, Bin Type: {bintype}
-            </div>
-            <button onClick={onCaptureDone}>Map</button>{" "}
+            {prediction && (
+              <div className="suggestion">
+                Your {prediction} should go in the {bintype}.
+              </div>
+            )}
+            <button onClick={onCaptureDone}>Go to Map</button>{" "}
             {/* This button will switch to the Map view */}
           </>
         )}

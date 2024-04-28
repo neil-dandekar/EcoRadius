@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(#4476b8 0%, #89ce65 50%, #4e7cb7 100%);
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+html,
+body {
+  height: 100%; /* Make sure the HTML and body fill the viewport height */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  overflow: hidden; /* Prevent scrolling on the entire page */
+}

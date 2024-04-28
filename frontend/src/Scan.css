@@ -3,10 +3,49 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 10px;
+  height: 80vh;
+}
+
+.videoFeed {
+  width: auto;
+  height: 100%; /* Adapt to container height */
+  object-fit: cover;
+}
+
+.suggestion {
+  padding: 0% 5%;
 }
 
 .feed {
   width: 200px;
   width: 200px;
   color: brown;
+}
+
+.App {
+  background: linear-gradient(135deg, #76b852, #8dc26f);
+  color: white;
+  padding: 20px;
+}
+
+button {
+  display: inline-block;
+  outline: 0;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  padding: 9px 22px;
+  font-size: 22px;
+  height: 50px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  line-height: normal;
+  background: linear-gradient(90deg, #5522fa 0, #0074e4 100%);
+  border-radius: 50px;
+  transition: color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  :hover {
+    box-shadow: 0 0 0 0.15rem #5ceace;
+  }
 }

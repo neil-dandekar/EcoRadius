@@ -1,0 +1,21 @@
+.appBackground {
+  min-height: 70vh; /* Make sure it covers the full view height */
+  color: white; /* Set text color to white for better readability */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none !important;
+  margin: 0;
+}
+
+h1 {
+  text-align: center; /* Centers text horizontally */
+  color: #76b852; /* Sets the text color */
+  font-size: 4em; /* Increases the size of the text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow for depth */
+  transition: color 0.3s; /* Smooth transition for color change on hover */
+}
+
+h1:hover {
+  color: #8dc26f; /* Lighter green shade on hover */
+}

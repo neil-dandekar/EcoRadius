@@ -5,14 +5,14 @@ const Scan = () => {
   const [image, setImage] = useState<string>("");
   const [prediction, setPrediction] = useState<string>("None");
   const [bintype, setBintype] = useState<string>("None");
-  const [captured, setCaptured] = useState<boolean>(false); // Adjusted the name for clarity
+  const [captured, setCaptured] = useState<boolean>(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     startCamera();
     return () => {
-      stopCamera(); // Ensures the camera is stopped when the component unmounts
+      stopCamera();
     };
   }, []);
 
@@ -23,6 +23,13 @@ const Scan = () => {
         .then((mediaStream) => {
           if (videoRef.current) {
             videoRef.current.srcObject = mediaStream;
+            videoRef.current.onloadedmetadata = () => {
+              // Set the canvas size to the video size once it's loaded
+              if (canvasRef.current) {
+                canvasRef.current.width = videoRef.current.videoWidth;
+                canvasRef.current.height = videoRef.current.videoHeight;
+              }
+            };
           }
         })
         .catch((error) => {
@@ -37,10 +44,10 @@ const Scan = () => {
     if (canvas && video) {
       const context = canvas.getContext("2d");
       if (context) {
-        context.drawImage(video, 0, 0, canvas.width, canvas.height);
+        context.drawImage(video, 0, 0, video.videoWidth, video.videoHeight);
         const base64image = canvas.toDataURL("image/jpeg");
         setImage(base64image);
-        setCaptured(true); // Set captured state to true to switch UI
+        setCaptured(true);
         sendToBackend(base64image);
       }
     }
@@ -57,24 +64,7 @@ const Scan = () => {
       .then((response) => response.json())
       .then((data) => {
         setPrediction(data.prediction);
-        let bin: string;
-        switch (data.prediction) {
-          case "glass":
-          case "cardboard":
-          case "plastic":
-          case "metal":
-            bin = "recyclable";
-            break;
-          case "trash":
-            bin = "landfill";
-            break;
-          case "paper":
-            bin = "compostable";
-            break;
-          default:
-            bin = "unknown";
-            break;
-        }
+        const bin = determineBin(data.prediction);
         setBintype(bin);
       })
       .catch((error) => {
@@ -82,6 +72,22 @@ const Scan = () => {
         setPrediction("Error in prediction");
         setBintype("Error determining bin type");
       });
+  };
+
+  const determineBin = (prediction: string) => {
+    switch (prediction) {
+      case "glass":
+      case "cardboard":
+      case "plastic":
+      case "metal":
+        return "recyclable";
+      case "trash":
+        return "landfill";
+      case "paper":
+        return "compostable";
+      default:
+        return "unknown";
+    }
   };
 
   const stopCamera = () => {
@@ -114,16 +120,12 @@ const Scan = () => {
               style={{ width: "100%", height: "auto" }}
             />
             <div>
-              Prediction: {prediction}, Bin Type: {bintype}
+              Prediction: {prediction}
+              Bin Type: {bintype}
             </div>
           </>
         )}
-        <canvas
-          ref={canvasRef}
-          style={{ display: "none" }}
-          width="640"
-          height="480"
-        ></canvas>
+        <canvas ref={canvasRef} style={{ display: "none" }}></canvas>
       </div>
     </>
   );

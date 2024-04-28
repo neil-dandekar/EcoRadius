@@ -32,14 +32,6 @@ const Scan = () => {
       .then((data) => {
         console.log("Success:", data);
         setPrediction(data.prediction); // Update the prediction state with the class received from the backend
-        const wasteCategories = {
-          glass: "recyclable",
-          cardboard: "recyclable",
-          paper: "recyclable",
-          plastic: "recyclable",
-          metal: "recyclable",
-          trash: "landfill",
-        };
         switch (prediction) {
           case "glass":
           case "cardboard":

@@ -4,6 +4,7 @@ import { useState } from "react";
 const Scan = () => {
   const [image, setImage] = useState("");
   const [prediction, setPrediction] = useState("None");
+  const [bintype, setBintype] = useState("None");
 
   const capture = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files ? event.target.files[0] : null;
@@ -31,6 +32,28 @@ const Scan = () => {
       .then((data) => {
         console.log("Success:", data);
         setPrediction(data.prediction); // Update the prediction state with the class received from the backend
+        const wasteCategories = {
+          glass: "recyclable",
+          cardboard: "recyclable",
+          paper: "recyclable",
+          plastic: "recyclable",
+          metal: "recyclable",
+          trash: "landfill",
+        };
+        switch (prediction) {
+          case "glass":
+          case "cardboard":
+          case "plastic":
+          case "metal":
+            setBintype("recyclable");
+            break;
+          case "trash":
+            setBintype("landfill");
+            break;
+          case "paper":
+            setBintype("compostable");
+            break;
+        }
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -56,6 +79,7 @@ const Scan = () => {
           />
         )}
         Prediction: {prediction}
+        Bin Type: {bintype}
       </div>
     </>
   );

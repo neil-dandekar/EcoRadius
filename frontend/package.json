@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "-frontend",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
     "react": "^18.3.1",
+=======
+    "netlify-cli": "^17.23.1",
+    "react": "^18.2.0",
+>>>>>>> e64bccf (blank front end)
     "react-dom": "^18.2.0"
   },
   "devDependencies": {

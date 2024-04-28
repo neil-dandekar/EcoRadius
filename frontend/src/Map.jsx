@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { LoadScript, GoogleMap, KmlLayer, Marker } from "@react-google-maps/api";
 import {findNearest} from 'geolib';
+import './Map.css'
 
 const locArr = [
     { latitude: 38.5454983, longitude: -121.754064 },
@@ -53,13 +54,8 @@ const Map = () => {
             lng: position.coords.longitude
         });
         let tempCoord = findNearest(cds, locArr)
-        updateNearest({lat: tempCoord.latitude, lng: tempCoord.longitude })
-        console.log(nearestCoord, tempCoord)
+        setNearestCoord({lat: tempCoord.latitude, lng: tempCoord.longitude })
     };
-
-    const updateNearest = (currentCoords) => {
-      setNearestCoord({lat: currentCoords.lat + 0.01, lng: currentCoords.lng + 0.01});
-    }
 
     const geoLocateErr = (err) => {
         console.log("Error occurred with geolocation measurement!!!: ", err.message);
@@ -79,32 +75,30 @@ const Map = () => {
     }, []);
 
   return (
-    <LoadScript googleMapsApiKey={"AIzaSyBIXoPr9hxhk7hs5PRlP9imymTuPC0TPzI"}>
-      <GoogleMap
-        mapContainerStyle={{ width: "400px", height: "400px" }}
-        center={cds}
-        zoom={10}
-      >
-        <KmlLayer
-          url='https://ecoradius.vercel.app/trashcan.kml'
-          options={{ preserveViewport: true }}
-          onLoad={() => console.log('KML Layer loaded!')}
-          onError={(error) => console.error('Error loading KML Layer:', error)}
-        />
-        {nearestCoord && (
-          <>
-            <Marker
-                position = {nearestCoord}
-                icon = {"http://maps.google.com/mapfiles/ms/icons/blue-dot.png"}
-            />
-            <Marker
-                position={cds}
-                icon = {"http://maps.google.com/mapfiles/ms/icons/red-dot.png"}
-            />
-          </>
-        )}
-      </GoogleMap>
-    </LoadScript>
+    <div className="map" >
+      <LoadScript googleMapsApiKey={"AIzaSyBIXoPr9hxhk7hs5PRlP9imymTuPC0TPzI"}>
+        <GoogleMap
+          mapContainerStyle={{ width: "400px", height: "400px" }}
+          center={cds}
+          zoom={10}
+        >
+          <KmlLayer
+            url='https://ecoradius.vercel.app/trashcan.kml'
+            options={{ preserveViewport: true }}
+            onLoad={() => console.log('KML Layer loaded!')}
+            onError={(error) => console.error('Error loading KML Layer:', error)}
+          />
+          {nearestCoord && (
+            <>
+              <Marker
+                  position={cds}
+                  icon = {"http://maps.google.com/mapfiles/ms/icons/red-dot.png"}
+              />
+            </>
+          )}
+        </GoogleMap>
+      </LoadScript>
+    </div>
   );
 };
 

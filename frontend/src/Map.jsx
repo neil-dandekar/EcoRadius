@@ -82,7 +82,7 @@ const Map = () => {
       if ("geolocation" in navigator) {
         navigator.geolocation.watchPosition(geoLocate, geoLocateErr, {
           enableHighAccuracy: true,
-          timeout: 3500,
+          timeout: 2000,
           maximumAge: 0,
         });
       }
@@ -96,7 +96,7 @@ const Map = () => {
       <GoogleMap
         mapContainerStyle={{ width: "400px", height: "700px" }}
         center={cds}
-        zoom={20}
+        zoom={15}
       >
         <KmlLayer
           url="https://ecoradius.vercel.app/trashcan.kml"

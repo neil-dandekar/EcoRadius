@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # new apps
     "rest_framework",
     "api",
+    "model",
 ]
 
 MIDDLEWARE = [

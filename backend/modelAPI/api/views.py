@@ -1,6 +1,6 @@
-from django.http import Response
+from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from ..model.classifier import Classifier
+from model.classifier import Classifier
 
 
 @api_view(["POST"])

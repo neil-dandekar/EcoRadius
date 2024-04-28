@@ -48,7 +48,7 @@ const Map = () => {
         let minMarker = null
         for(let i = 0; i < placemarks.length; i++){
             coordsText = placemarks[i].getElementsByTagName("coordinates")
-            coords = coordsText.split(',').map(Number)
+            coords = coordsText.trim().split(',').map(Number)
             singCoord = new google.maps.LatLng(coords[1],coords[0])
             dist = google.maps.geometry.spherical.computeDistanceBetween(cds, singCoord)
             if(minMarkerDist > dist){

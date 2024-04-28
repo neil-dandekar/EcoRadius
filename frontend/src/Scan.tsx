@@ -4,8 +4,6 @@ import React, { useState } from "react";
 const Scan = () => {
   const [image, setImage] = useState("");
 
-  const getPrediction = ()
-
   const capture = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files ? event.target.files[0] : null;
     if (file) {

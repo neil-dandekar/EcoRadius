@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 const Scan = () => {
   const [image, setImage] = useState("");
-  const [prediction, setPrediction] = useState("");
+  // const [prediction, setPrediction] = useState("");
 
   const capture = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files ? event.target.files[0] : null;

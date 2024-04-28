@@ -30,7 +30,6 @@ const Scan = () => {
       .then((response) => response.json())
       .then((data) => {
         console.log("Success:", data);
-        setPrediction(data);
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -54,8 +53,6 @@ const Scan = () => {
             style={{ width: "100%", height: "auto" }}
           />
         )}
-        {image}
-        {prediction}
       </div>
     </>
   );

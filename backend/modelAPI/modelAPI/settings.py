@@ -62,7 +62,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 # Or specify allowed origins (recommended for production)
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # Adjust this to your React app's URL
+    "http://localhost:5173",  # Adjust this to your React app's URL
     "https://ecoradius.vercel.app",
 ]
 

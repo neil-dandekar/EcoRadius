@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { LoadScript, GoogleMap, KmlLayer } from '@react-google-maps/api';
 
-export const Map = () => {
+const Map = () => {
 
     const [cds, setCoords] = useState({lat: 0, lng: 0});
 
@@ -54,3 +54,5 @@ export const Map = () => {
         </LoadScript>
     );
 }
+
+export default Map

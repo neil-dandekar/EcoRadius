@@ -1,6 +1,25 @@
 import React, { useState, useEffect } from "react";
 import { LoadScript, GoogleMap, KmlLayer } from "@react-google-maps/api";
 
+async function parseKML(url){
+    try{
+        const res = await fetch(url)
+        const kml = await res.text()
+        const parser = new DOMParser()
+        const xml = parser.parseFromString(kml, "application/xml")
+        const placemarks = xml.getElementsByTagName("Placemark")
+
+        for(let i = 0; i < placemarks.length; i++){
+            console.log(placemarks[i].getElementsByTagName("coordinates"))
+        }
+        return []
+    } catch (err) {
+        console.error("Failed parse! With error ", err)
+        return []
+    }
+}
+
+
 const Map = () => {
   const [cds, setCoords] = useState({ lat: 0, lng: 0 });
 
@@ -25,6 +44,7 @@ const Map = () => {
                  );
             }
             console.log(cds.lat, cds.lng)
+            parseKML('https://ecoradius.vercel.app/trashcan.kml')
         }, 10000);
         return () => clearInterval(interval)
     }, []);

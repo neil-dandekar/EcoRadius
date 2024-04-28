@@ -52,6 +52,7 @@ const Map = () => {
             lat: position.coords.latitude,
             lng: position.coords.longitude
         });
+        console.log("here")
         console.log(findNearest(cds, locArr))
         updateNearest(findNearest(cds, locArr))
     };

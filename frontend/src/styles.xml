@@ -1,0 +1,13 @@
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+  <Style id="myCustomStyle">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+      </Icon>
+      <color>ff00ff00</color> <!-- Green color in ABGR format -->
+    </IconStyle>
+    <LabelStyle>
+      <color>ff00ff00</color> <!-- Label text color -->
+    </LabelStyle>
+  </Style>

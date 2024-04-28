@@ -1,27 +1,68 @@
 import React, { useState, useEffect } from "react";
 import { LoadScript, GoogleMap, KmlLayer } from "@react-google-maps/api";
 
-async function parseKML(url){
+const google = window.google;
+
+// returns marker with minimum distance
+/* async function closestTrashCan(currentPos,url){
     try{
         const res = await fetch(url)
         const kml = await res.text()
         const parser = new DOMParser()
         const xml = parser.parseFromString(kml, "application/xml")
         const placemarks = xml.getElementsByTagName("Placemark")
-
+        
+        var coordsText, coords, dist, singCoord
+        let minMarkerDist = Infinity
+        let minMarker = null
         for(let i = 0; i < placemarks.length; i++){
-            console.log(placemarks[i].getElementsByTagName("coordinates"))
+            coordsText = placemarks[i].getElementsByTagName("coordinates")
+            coords = coordsText.split(',').map(Number)
+            singCoord = new google.maps.LatLng(coords[1],coords[0])
+            dist = google.maps.geometry.spherical.computeDistanceBetween(currentPos, singCoord )
+            if(minMarkerDist > dist){
+                minMarkerDist = dist
+                minMarker = placemarks[i]
+            }
         }
-        return []
+        return [minMarkerDist, minMarker]
     } catch (err) {
         console.error("Failed parse! With error ", err)
         return []
     }
-}
+} */
 
 
 const Map = () => {
   const [cds, setCoords] = useState({ lat: 0, lng: 0 });
+  const minDist = async () => {
+    try{
+        const res = await fetch('https://ecoradius.vercel.app/trashcan.kml')
+        const kml = await res.text()
+        const parser = new DOMParser()
+        const xml = parser.parseFromString(kml, "application/xml")
+        const placemarks = xml.getElementsByTagName("Placemark")
+        
+        var coordsText, coords, dist, singCoord
+        let minMarkerDist = Infinity
+        let minMarker = null
+        for(let i = 0; i < placemarks.length; i++){
+            coordsText = placemarks[i].getElementsByTagName("coordinates")
+            coords = coordsText.split(',').map(Number)
+            singCoord = new google.maps.LatLng(coords[1],coords[0])
+            dist = google.maps.geometry.spherical.computeDistanceBetween(cds, singCoord)
+            if(minMarkerDist > dist){
+                minMarkerDist = dist
+                minMarker = placemarks[i]
+            }
+        }
+        //minMarker.getElementsByTagName("styleUrl")[0].childNodes[0].nodeValue = "";
+        return [minMarkerDist, minMarker]
+    } catch (err) {
+        console.error("Failed parse! With error ", err)
+        return []
+    }
+  };
 
   const geoLocate = (position) => {
       console.log(position.coords.latitude, position.coords.longitude)
@@ -44,7 +85,7 @@ const Map = () => {
                  );
             }
             console.log(cds.lat, cds.lng)
-            parseKML('https://ecoradius.vercel.app/trashcan.kml')
+            console.log(minDist('https://ecoradius.vercel.app/trashcan.kml')[0])
         }, 10000);
         return () => clearInterval(interval)
     }, []);

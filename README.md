@@ -1,7 +1,7 @@
 # HackDavis2024
 
 ## Setup:
-For now, we have not deployed the Django Backend.
+For now, we have not deployed the Django Backend, due to time constraints.
 
 For simple local execution, you will need to perform ```npm i``` in the cmd line in both the backend and frontend directories
 

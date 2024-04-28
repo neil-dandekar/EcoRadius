@@ -97,7 +97,7 @@ const Map = () => {
                  );
             }
             console.log(cds.lat, cds.lng)
-           // console.log(findNearest(cds, locArr))
+            console.log(findNearest(cds, locArr))
         }, 10000);
         return () => clearInterval(interval)
     }, []);

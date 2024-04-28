@@ -14,13 +14,18 @@ const Map = () => {
     const geoLocateErr = () => {
         console.log("Error occurred with geolocation measurement!!!");
     }
-
+    
+    // get position
     useEffect(() => {
-        if("geolocation" in navigator){
-            navigator.geolocation.watchPosition(geoLocate, geoLocateErr, 
-                {enableHighAccuracy: true, timeout: 10000, maximumAge: 0}
-             );
-        }
+        const interval = setInterval(() => {
+            if("geolocation" in navigator){
+                navigator.geolocation.watchPosition(geoLocate, geoLocateErr, 
+                    {enableHighAccuracy: true, timeout: 10000, maximumAge: 0}
+                 );
+            }
+            console.log(cds.lat, cds.lng)
+        }, 1000);
+        return () => clearInterval(interval)
     }, []);
 
     /* const startTrackingLocation = () => {

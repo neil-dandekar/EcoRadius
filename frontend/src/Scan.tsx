@@ -5,7 +5,7 @@ const Scan = () => {
   const [image, setImage] = useState<string>("");
   const [prediction, setPrediction] = useState<string>("None");
   const [bintype, setBintype] = useState<string>("None");
-  const [capturing, setCapturing] = useState<boolean>(false); // New state to track if a capture has been taken
+  const [captured, setCaptured] = useState<boolean>(false); // Adjusted the name for clarity
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -40,7 +40,7 @@ const Scan = () => {
         context.drawImage(video, 0, 0, canvas.width, canvas.height);
         const base64image = canvas.toDataURL("image/jpeg");
         setImage(base64image);
-        setCapturing(true); // Update capturing state to true to show the captured image
+        setCaptured(true); // Set captured state to true to switch UI
         sendToBackend(base64image);
       }
     }
@@ -56,10 +56,8 @@ const Scan = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log("Success:", data);
         setPrediction(data.prediction);
-        let bin: string = "bruh";
-        console.log(data.prediction);
+        let bin: string;
         switch (data.prediction) {
           case "glass":
           case "cardboard":
@@ -73,13 +71,16 @@ const Scan = () => {
           case "paper":
             bin = "compostable";
             break;
+          default:
+            bin = "unknown";
+            break;
         }
-        console.log(bin);
         setBintype(bin);
       })
       .catch((error) => {
         console.error("Error:", error);
         setPrediction("Error in prediction");
+        setBintype("Error determining bin type");
       });
   };
 
@@ -94,13 +95,28 @@ const Scan = () => {
   return (
     <>
       <div className="scanctr">
-        {!capturing && (
-          <video
-            ref={videoRef}
-            autoPlay
-            playsInline
-            style={{ width: "50%", height: "50%" }}
-          ></video>
+        {!captured && (
+          <>
+            <video
+              ref={videoRef}
+              autoPlay
+              playsInline
+              style={{ width: "100%", height: "auto" }}
+            ></video>
+            <button onClick={capture}>Capture</button>
+          </>
+        )}
+        {captured && (
+          <>
+            <img
+              src={image}
+              alt="Captured"
+              style={{ width: "100%", height: "auto" }}
+            />
+            <div>
+              Prediction: {prediction}, Bin Type: {bintype}
+            </div>
+          </>
         )}
         <canvas
           ref={canvasRef}
@@ -108,17 +124,6 @@ const Scan = () => {
           width="640"
           height="480"
         ></canvas>
-        {capturing && (
-          <img
-            src={image}
-            alt="Captured"
-            style={{ width: "50%", height: "50%" }}
-          />
-        )}
-        <button onClick={capture}>Capture</button>
-        <div>
-          Prediction: {prediction}, Bin Type: {bintype}
-        </div>
       </div>
     </>
   );

@@ -93,7 +93,7 @@ const Map = () => {
 
   return (
     <LoadScript googleMapsApiKey={"AIzaSyBIXoPr9hxhk7hs5PRlP9imymTuPC0TPzI"}>
-      <GoogleMap className="map" center={cds} zoom={100}>
+      <GoogleMap className="map" center={cds} zoom={10}>
         <KmlLayer
           url="https://ecoradius.vercel.app/trashcan.kml"
           options={{ preserveViewport: true }}

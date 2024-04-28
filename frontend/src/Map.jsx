@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { LoadScript, GoogleMap, KmlLayer } from "@react-google-maps/api";
+import { LoadScript, GoogleMap, KmlLayer, Marker } from "@react-google-maps/api";
 import {findNearest} from 'geolib';
+
+const google = window.google;
 
 
 const locArr = [
@@ -44,37 +46,8 @@ const locArr = [
 ];
 
 const Map = () => {
-  const [cds, setCoords] = useState({ lat: 0, lng: 0 });
-    /* const minDist = async () => {
-    try{
-        const res = await fetch('https://ecoradius.vercel.app/trashcan.kml')
-        const kml = await res.text()
-        const parser = new DOMParser()
-        const xml = parser.parseFromString(kml, "application/xml")
-        const placemarks = xml.getElementsByTagName("Placemark")
-        
-        var coordsText, coords, dist, singCoord
-        let minMarkerDist = Infinity
-        let minMarker = null
-        for(let i = 0; i < placemarks.length; i++){
-            coordsText = placemarks[i].getElementsByTagName("coordinates");
-            console.log(coordsText)
-            coords = coordsText.trim().split(',').map(Number)
-            singCoord = new google.maps.LatLng(coords[1],coords[0])
-            dist = google.maps.geometry.spherical.computeDistanceBetween(cds, singCoord)
-            if(minMarkerDist > dist){
-                minMarkerDist = dist
-                minMarker = placemarks[i]
-            }
-        }
-        //minMarker.getElementsByTagName("styleUrl")[0].childNodes[0].nodeValue = "";
-        return [minMarkerDist, minMarker]
-    } catch (err) {
-        console.error("Failed parse! With error ", err)
-        return []
-    }
- };  */
-
+    const [cds, setCoords] = useState({ lat: 0, lng: 0 });
+    const [nearestCoord, setNearestCoord] = useState(null);
 
     const geoLocate = (position) => {
         console.log(position.coords.latitude, position.coords.longitude)
@@ -82,10 +55,28 @@ const Map = () => {
             lat: position.coords.latitude,
             lng: position.coords.longitude
         });
+        setNearestCoord(findNearest(cds, locArr))
     };
 
     const geoLocateErr = (err) => {
         console.log("Error occurred with geolocation measurement!!!: ", err.message);
+    }
+
+    const highlightNearest = () => {
+        let nearest = findNearest(cds, locArr)
+        let mapMarkers = locArr.map(place => {
+            return new google.maps.Marker({
+                position: {lat: place.latitude, lng: place.longitude},
+                //map: map,
+                title: place.description
+            });
+        });
+
+        mapMarkers.forEach(marker => {
+            if(marker.getPosition().lat() === nearest.latitude && marker.getPosition().lng() === nearest.longitude){
+                marker.setIcon('http://maps.google.com/mapfiles/ms/icons/red-dot.png');
+            }
+        });
     }
     
     // get position
@@ -96,8 +87,8 @@ const Map = () => {
                     {enableHighAccuracy: true, timeout: 10000, maximumAge: 0}
                  );
             }
-            console.log(cds.lat, cds.lng)
-            console.log(findNearest(cds, locArr))
+            console.log("your coords: ", cds.lat, cds.lng)
+            highlightNearest();
         }, 10000);
         return () => clearInterval(interval)
     }, []);
@@ -115,6 +106,12 @@ const Map = () => {
           onLoad={() => console.log('KML Layer loaded!')}
           onError={(error) => console.error('Error loading KML Layer:', error)}
         />
+        {nearestCoord && (
+            <Marker
+                position = {nearestCoord}
+                icon = {"http://maps.google.com/mapfiles/ms/icons/blue-dot.png"}
+            />
+        )}
       </GoogleMap>
     </LoadScript>
   );

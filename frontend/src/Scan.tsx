@@ -1,27 +1,53 @@
 import "./Scan.css";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const Scan = () => {
-  const [image, setImage] = useState("");
-  const [prediction, setPrediction] = useState("None");
-  const [bintype, setBintype] = useState("None");
+  const [image, setImage] = useState<string>("");
+  const [prediction, setPrediction] = useState<string>("None");
+  const [bintype, setBintype] = useState<string>("None");
+  const [capturing, setCapturing] = useState<boolean>(false); // New state to track if a capture has been taken
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
-  const capture = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files ? event.target.files[0] : null;
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = function (evt: ProgressEvent<FileReader>) {
-        const base64image = evt.target!.result as string;
+  useEffect(() => {
+    startCamera();
+    return () => {
+      stopCamera(); // Ensures the camera is stopped when the component unmounts
+    };
+  }, []);
+
+  const startCamera = () => {
+    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+      navigator.mediaDevices
+        .getUserMedia({ video: { facingMode: "environment" } })
+        .then((mediaStream) => {
+          if (videoRef.current) {
+            videoRef.current.srcObject = mediaStream;
+          }
+        })
+        .catch((error) => {
+          console.error("Error accessing the camera:", error);
+        });
+    }
+  };
+
+  const capture = () => {
+    const canvas = canvasRef.current;
+    const video = videoRef.current;
+    if (canvas && video) {
+      const context = canvas.getContext("2d");
+      if (context) {
+        context.drawImage(video, 0, 0, canvas.width, canvas.height);
+        const base64image = canvas.toDataURL("image/jpeg");
         setImage(base64image);
+        setCapturing(true); // Update capturing state to true to show the captured image
         sendToBackend(base64image);
-      };
-      reader.readAsDataURL(file);
+      }
     }
   };
 
   const sendToBackend = (base64image: string) => {
     fetch("http://127.0.0.1:8000/api/classify/", {
-      // Ensure this URL is correct and points to your Django server
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -31,7 +57,7 @@ const Scan = () => {
       .then((response) => response.json())
       .then((data) => {
         console.log("Success:", data);
-        setPrediction(data.prediction); // Update the prediction state with the class received from the backend
+        setPrediction(data.prediction);
         let bin: string = "bruh";
         console.log(data.prediction);
         switch (data.prediction) {
@@ -53,28 +79,46 @@ const Scan = () => {
       })
       .catch((error) => {
         console.error("Error:", error);
-        setPrediction("Error in prediction"); // Handle any errors
+        setPrediction("Error in prediction");
       });
+  };
+
+  const stopCamera = () => {
+    const tracks =
+      videoRef.current?.srcObject instanceof MediaStream
+        ? videoRef.current.srcObject.getTracks()
+        : [];
+    tracks.forEach((track) => track.stop());
   };
 
   return (
     <>
       <div className="scanctr">
-        <input
-          type="file"
-          accept="image/*"
-          capture="environment"
-          onChange={capture}
-          className="feed"
-        />
-        {image && (
+        {!capturing && (
+          <video
+            ref={videoRef}
+            autoPlay
+            playsInline
+            style={{ width: "50%", height: "50%" }}
+          ></video>
+        )}
+        <canvas
+          ref={canvasRef}
+          style={{ display: "none" }}
+          width="640"
+          height="480"
+        ></canvas>
+        {capturing && (
           <img
             src={image}
             alt="Captured"
-            style={{ width: "100%", height: "auto" }}
+            style={{ width: "50%", height: "50%" }}
           />
         )}
-        Prediction: {prediction}, Bin Type: {bintype}
+        <button onClick={capture}>Capture</button>
+        <div>
+          Prediction: {prediction}, Bin Type: {bintype}
+        </div>
       </div>
     </>
   );

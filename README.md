@@ -1,5 +1,6 @@
 # HackDavis2024
 
+Check out our [DevPost!](https://devpost.com/software/ecoradius?ref_content=my-projects-tab&ref_feature=my_projects)
 ## Setup:
 For now, we have not deployed the Django Backend, due to time constraints.
 
